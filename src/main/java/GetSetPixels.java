@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.IOException;
 import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
 
 public class GetSetPixels{
     public static String toAscii(BufferedImage img, int regionWidth, int regionHeight)

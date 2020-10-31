@@ -38,7 +38,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>HelloWorld</mainClass>
+              <mainClass>AsciiConverter</mainClass>
             </manifest>
           </archive>
         </configuration>

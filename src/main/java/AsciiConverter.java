@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
 
-public class HelloWorld
+public class AsciiConverter
 {
     public static void main(String[] args) throws IOException, JCodecException, InterruptedException
     {
