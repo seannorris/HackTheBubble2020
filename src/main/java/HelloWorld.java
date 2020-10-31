@@ -26,7 +26,7 @@ public class HelloWorld
         var track = demuxer.getVideoTrack();
         var info = track.getMeta();
         var framerate = info.getTotalFrames() / info.getTotalDuration();
-        var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate) * 10, info.getTotalFrames()));
+        var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate * 10), info.getTotalFrames()));
         var size = info.getVideoCodecMeta().getSize();
         info.getVideoCodecMeta().getPixelAspectRatio();
         
