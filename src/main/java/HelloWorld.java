@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 
 public class HelloWorld
 {
+    
     public static void main(String[] args) throws IOException, JCodecException, InterruptedException
     {
         if(args.length < 1)
@@ -25,10 +26,16 @@ public class HelloWorld
         var track = demuxer.getVideoTrack();
         var info = track.getMeta();
         var size = info.getVideoCodecMeta().getSize();
+        info.getVideoCodecMeta().getPixelAspectRatio();
         
         System.out.println(size.getWidth() + "x" + size.getHeight() + ", " + info.getTotalFrames() + " frames @ " + info.getTotalFrames() / info.getTotalDuration() + "fps");
         var timeBetweenFrames = (info.getTotalDuration() / info.getTotalFrames()) * 1000;
         var skipDelta = 2 * timeBetweenFrames;
+        
+        var aspectRatio = 2;
+        var width = args.length < 2 ? 160 : Integer.parseInt(args[1]);
+        var regionWidth = Math.max(size.getWidth() / width, 1);
+        var regionHeight = regionWidth * aspectRatio;
         
         var skipped = 0;
         long lastFrameTime = -1;
@@ -52,11 +59,10 @@ public class HelloWorld
             }
             else
             {
-                var temp = demuxer.getAudioTracks().get(0).nextFrame().data;
                 lastFrameTime = System.currentTimeMillis();
             }
     
-            System.out.println(GetSetPixels.toAscii(image));
+            System.out.println(GetSetPixels.toAscii(image, regionWidth, regionHeight));
         }
         System.out.println("Skipped " + skipped + " frames.");
     }

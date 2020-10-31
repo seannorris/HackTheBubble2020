@@ -4,17 +4,17 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 
 public class GetSetPixels{
-    public static String toAscii(BufferedImage img)
+    public static String toAscii(BufferedImage img, int regionWidth, int regionHeight)
     {
         var out = new StringBuilder();
         
         int width = img.getWidth();
         int height = img.getHeight();
     
-        for (int i = 0 ; i < height / 10 ; i ++) {
-            for (int j = 0 ; j < width / 5 ; j ++) {
+        for (int i = 0 ; i < height / regionHeight ; i ++) {
+            for (int j = 0 ; j < width / regionWidth ; j ++) {
             
-                int color = img.getRGB(j * 5, i * 10); // pixel operations
+                int color = img.getRGB(j * regionWidth, i * regionHeight); // pixel operations
             
                 int red   = (color >>> 16) & 0xFF;
                 int green = (color >>>  8) & 0xFF;
