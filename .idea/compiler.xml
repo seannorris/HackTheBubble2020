@@ -9,8 +9,8 @@
         <module name="HackTheBubble2020" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="HackTheBubble2020" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="HackTheBubble2020" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
