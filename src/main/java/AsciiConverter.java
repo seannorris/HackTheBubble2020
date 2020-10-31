@@ -4,6 +4,7 @@ import org.jcodec.common.io.NIOUtils;
 import org.jcodec.common.model.Picture;
 import org.jcodec.containers.mp4.demuxer.MP4Demuxer;
 import org.jcodec.scale.AWTUtil;
+import swing.MainWindow;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -35,9 +36,11 @@ public class AsciiConverter
         var skipDelta = 2 * timeBetweenFrames;
         
         var aspectRatio = 2;
-        var width = args.length < 2 ? 160 : Integer.parseInt(args[1]);
+        var width = args.length < 2 ? 50 : Integer.parseInt(args[1]);
         var regionWidth = Math.max(size.getWidth() / width, 1);
         var regionHeight = regionWidth * aspectRatio;
+        
+        var window = new MainWindow(size.getWidth() / regionWidth, size.getHeight() / regionHeight);
         
         buffer.fill();
         
@@ -61,7 +64,7 @@ public class AsciiConverter
             else
                 lastFrameTime = System.currentTimeMillis();
     
-            System.out.println(GetSetPixels.toAscii(frame, regionWidth, regionHeight));
+           GetSetPixels.toAscii(frame, regionWidth, regionHeight, window.getGrid());
         }
         System.out.println("Dropped " + skipped + " frames.");
     }
