@@ -2,9 +2,15 @@ import org.jcodec.api.FrameGrab;
 import org.jcodec.api.JCodecException;
 import org.jcodec.common.io.NIOUtils;
 import org.jcodec.containers.mp4.demuxer.MP4Demuxer;
+import org.jcodec.scale.AWTUtil;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.awt.image.ColorModel;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class HelloWorld
 {
@@ -18,5 +24,13 @@ public class HelloWorld
         var info = track.getMeta();
         var size = info.getVideoCodecMeta().getSize();
         System.out.println(size.getWidth() + "x" + size.getHeight() + ", " + info.getTotalFrames() + " frames @ " + info.getTotalFrames() / info.getTotalDuration() + "fps");
+        
+        for(var x = 0; x < info.getTotalFrames(); x++)
+        {
+            var frame = frameGrab.getNativeFrame();
+            var bufferedImage = AWTUtil.toBufferedImage(frame);
+            
+            ImageIO.write(bufferedImage, "jpg", new File("temp/image-" + x + ".jpg" ));
+        }
     }
 }
