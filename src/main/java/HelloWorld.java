@@ -4,17 +4,11 @@ import org.jcodec.common.io.NIOUtils;
 import org.jcodec.containers.mp4.demuxer.MP4Demuxer;
 import org.jcodec.scale.AWTUtil;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.awt.image.ColorModel;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.Arrays;
 
 public class HelloWorld
 {
-    
     public static void main(String[] args) throws IOException, JCodecException
     {
         var channel = NIOUtils.readableChannel(Paths.get(args[0]).toFile());
