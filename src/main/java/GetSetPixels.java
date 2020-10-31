@@ -4,11 +4,12 @@ import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 
 public class GetSetPixels{
-    public static void drawFrame(BufferedImage img)
+    public static String toAscii(BufferedImage img)
     {
+        var out = new StringBuilder();
+        
         int width = img.getWidth();
         int height = img.getHeight();
-    
     
         for (int i = 0 ; i < height / 10 ; i ++) {
             for (int j = 0 ; j < width / 10 ; j ++) {
@@ -25,37 +26,40 @@ public class GetSetPixels{
                 // choose brightness threshold as appropriate:
 //                if (luminance >= 0.5f) {
 //                    // bright color
-//                    System.out.print("@ ");
+//                    out.append("@ ");
 //                } else {
 //                    // dark color
-//                    System.out.print("* ");
+//                    out.append("* ");
 //                }
             
                 if (luminance >= 0.9) {
-                    System.out.print(' ');
+                    out.append(' ');
                 } else if (luminance >= 0.8) {
-                    System.out.print('.');
+                    out.append('.');
                 } else if (luminance >= 0.7) {
-                    System.out.print('*');
+                    out.append('*');
                 } else if (luminance >= 0.6) {
-                    System.out.print(':');
+                    out.append(':');
                 } else if (luminance >= 0.5) {
-                    System.out.print('o');
+                    out.append('o');
                 } else if (luminance >= 0.4) {
-                    System.out.print('&');
+                    out.append('&');
                 } else if (luminance >= 0.3) {
-                    System.out.print('8');
+                    out.append('8');
                 } else if (luminance >= 0.2) {
-                    System.out.print('#');
+                    out.append('#');
                 } else {
-                    System.out.print('@');
+                    out.append('@');
                 }
 
-//                System.out.print(luminance);
-//               if (luminance != 0) System.out.print("* ");
-//                else System.out.print("  ");
+//                out.append(luminance);
+//               if (luminance != 0) out.append("* ");
+//                else out.append("  ");
             }
-            System.out.println();
+            out.append(System.lineSeparator());
+            
         }
+        
+        return out.toString();
     }
 }
