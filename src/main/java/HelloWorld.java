@@ -30,7 +30,8 @@ public class HelloWorld
             var frame = frameGrab.getNativeFrame();
             var bufferedImage = AWTUtil.toBufferedImage(frame);
             
-            ImageIO.write(bufferedImage, "jpg", new File("temp/image-" + x + ".jpg" ));
+            GetSetPixels.drawFrame(bufferedImage);
+            System.out.println();
         }
     }
 }
