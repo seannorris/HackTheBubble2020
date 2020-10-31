@@ -5,7 +5,6 @@ import org.jcodec.common.model.Picture;
 import org.jcodec.containers.mp4.demuxer.MP4Demuxer;
 import org.jcodec.scale.AWTUtil;
 
-import javax.swing.JFrame;
 import java.io.IOException;
 import java.nio.file.Paths;
 
@@ -16,6 +15,7 @@ public class HelloWorld
         if(args.length < 1)
         {
             System.out.println("Argument missing: path to video file.");
+            return;
         }
         var video = Paths.get(args[0]).toFile();
         
@@ -26,32 +26,38 @@ public class HelloWorld
         var info = track.getMeta();
         var size = info.getVideoCodecMeta().getSize();
         
-        var window = new JFrame(video.getName());
-        
         System.out.println(size.getWidth() + "x" + size.getHeight() + ", " + info.getTotalFrames() + " frames @ " + info.getTotalFrames() / info.getTotalDuration() + "fps");
         var timeBetweenFrames = (info.getTotalDuration() / info.getTotalFrames()) * 1000;
         var skipDelta = 2 * timeBetweenFrames;
         
-        var skipped = -1;
-        Picture frame;
+        var skipped = 0;
         long lastFrameTime = -1;
+        Picture frame;
         while((frame = frameGrab.getNativeFrame()) != null)
         {
             var image = AWTUtil.toBufferedImage(frame);
-            if(lastFrameTime != -1 && System.currentTimeMillis() - lastFrameTime < timeBetweenFrames)
+            if(lastFrameTime != -1)
             {
-                Thread.sleep(Math.max(System.currentTimeMillis() + (long)timeBetweenFrames - lastFrameTime, 0));
+                if(System.currentTimeMillis() - lastFrameTime < timeBetweenFrames)
+                {
+                    Thread.sleep(Math.max(System.currentTimeMillis() + (long)timeBetweenFrames - lastFrameTime, 0));
+                }
+                else if(System.currentTimeMillis() - lastFrameTime > skipDelta)
+                {
+                    lastFrameTime += timeBetweenFrames;
+                    skipped++;
+                    continue;
+                }
                 lastFrameTime += timeBetweenFrames;
             }
             else
             {
+                var temp = demuxer.getAudioTracks().get(0).nextFrame().data;
                 lastFrameTime = System.currentTimeMillis();
-                skipped++;
             }
     
             System.out.println(GetSetPixels.toAscii(image));
-            System.out.println();
         }
-        System.out.println(skipped);
+        System.out.println("Skipped " + skipped + " frames.");
     }
 }

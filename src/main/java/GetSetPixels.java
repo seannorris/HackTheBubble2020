@@ -12,9 +12,9 @@ public class GetSetPixels{
         int height = img.getHeight();
     
         for (int i = 0 ; i < height / 10 ; i ++) {
-            for (int j = 0 ; j < width / 10 ; j ++) {
+            for (int j = 0 ; j < width / 5 ; j ++) {
             
-                int color = img.getRGB(j * 10, i * 10); // pixel operations
+                int color = img.getRGB(j * 5, i * 10); // pixel operations
             
                 int red   = (color >>> 16) & 0xFF;
                 int green = (color >>>  8) & 0xFF;
@@ -59,7 +59,6 @@ public class GetSetPixels{
             out.append(System.lineSeparator());
             
         }
-        
         return out.toString();
     }
 }
