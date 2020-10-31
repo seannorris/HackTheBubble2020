@@ -1,0 +1,1607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="493.0" y="1705.0">logic.piece.Giraffe</node>
+    <node x="805.6340600497228" y="798.0">logic.player.SocketPlayer.ServerPlayer</node>
+    <node x="780.3840600497228" y="950.0">logic.player.SocketPlayer.ServerPlayer.Accepter</node>
+    <node x="7792.827576974569" y="162.0">ui.drawing.layout.ResponsiveSection</node>
+    <node x="3161.5973513100043" y="798.0">ui.menu.OptionChooser</node>
+    <node x="5588.734060049723" y="1182.0">ui.input.selection.UnselectableSection.Handler</node>
+    <node x="2829.1966245936146" y="1364.0">ui.game.menu.GameStartButton</node>
+    <node x="5203.180684643338" y="162.0">ui.drawing.DrawableSection</node>
+    <node x="110.0" y="798.0">logic.player.ai.AIPlayer.Move</node>
+    <node x="3213.583333333333" y="1496.0">ui.menu.TextBox.KeyHandler.EscapeHandler</node>
+    <node x="4390.516637980493" y="950.0">ui.drawing.composition.BufferedSectionComposer</node>
+    <node x="0.0" y="950.0">logic.player.ai.AIPlayer.BoardMove</node>
+    <node x="421.1340600497233" y="798.0">logic.player.ai.AIPlayer.AIMoveProcessor</node>
+    <node x="1376.2973513100042" y="1364.0">ui.game.menu.GameMenu.EscapeHandler</node>
+    <node x="5608.0" y="344.0">ui.drawing.layout.BorderSection</node>
+    <node x="2477.1966245936146" y="1364.0">ui.menu.button.ExitButton</node>
+    <node x="7590.6449703576245" y="1364.0">ui.menu.button.MenuButton</node>
+    <node x="3595.9840600497228" y="950.0">ui.game.Hand</node>
+    <node x="1150.2973513100042" y="950.0">logic.player.SocketPlayer.ServerPlayer.ConnectingMessage</node>
+    <node x="597.1340600497233" y="950.0">logic.player.SocketPlayer.ServerPlayer.Rejecter</node>
+    <node x="7319.3949703576245" y="1364.0">ui.menu.LabeledMenuItem</node>
+    <node x="7686.827576974569" y="586.0">ui.input.selection.layout.SelectableResponsiveSection</node>
+    <node x="3427.083333333333" y="1364.0">ui.game.Hand.BorderedPiece</node>
+    <node x="1057.0" y="1705.0">logic.piece.Rooster</node>
+    <node x="3113.5973513100043" y="586.0">ui.input.selection.DrawableSelectableSection</node>
+    <node x="1206.0" y="1695.0">ui.drawing.composition.OrderedCoordinate</node>
+    <node x="5771.984060049723" y="1496.0">ui.menu.TextBox.KeyHandler.MovementKeyHandler</node>
+    <node x="1553.4166666666665" y="1182.0">logic.GameHandler</node>
+    <node x="4922.234060049723" y="586.0">ui.input.selection.layout.SelectableBorderedSection</node>
+    <node x="483.29735131000416" y="1364.0">ui.game.menu.playerConfigs.ClientPlayerConfig</node>
+    <node x="1358.2973513100042" y="1182.0">ui.game.menu.GameMenu</node>
+    <node x="4110.029957926949" y="0.0">ui.drawing.PrintHandler</node>
+    <node x="957.0" y="1705.0">logic.piece.Lion</node>
+    <node x="2477.1966245936146" y="1496.0">ui.game.menu.ExitButton</node>
+    <node x="8081.147590361446" y="1364.0">ui.game.menu.Player</node>
+    <node x="6183.65072671639" y="950.0">ui.drawing.layout.Filler</node>
+    <node x="4318.279957926949" y="1364.0">ui.menu.TextBox.KeyHandler</node>
+    <node x="4106.516637980493" y="950.0">ui.input.selection.UnselectableBufferedSection</node>
+    <node x="572.6833046471593" y="586.0">logic.player.Player.CopyOfPlayer</node>
+    <node x="6053.15072671639" y="798.0">ui.drawing.colour.ColouredElement</node>
+    <node x="1093.8833046471595" y="798.0">logic.player.SocketPlayer.Receiver</node>
+    <node x="7040.15072671639" y="344.0">ui.drawing.layout.DrawableResponsiveSection</node>
+    <node x="237.0" y="1797.0">logic.player.ai.AIGame.Position</node>
+    <node x="8197.814257028112" y="1364.0">ui.menu.MenuString</node>
+    <node x="7855.247379996179" y="1182.0">ui.menu.MenuItem</node>
+    <node x="140.75" y="1695.0">logic.player.ai.AIGame</node>
+    <node x="17.934060049722575" y="586.0">logic.player.HumanPlayer</node>
+    <node x="736.6833046471593" y="586.0">logic.player.SocketPlayer</node>
+    <node x="4248.734060049723" y="798.0">ui.drawing.composition.OrderedSectionComposer</node>
+    <node x="897.7973513100042" y="1496.0">ui.game.Game.GameFinishedDialog</node>
+    <node x="32.75" y="1695.0">logic.Game.Coord</node>
+    <node x="6299.65072671639" y="950.0">ui.drawing.composition.BufferedSectionGrid</node>
+    <node x="857.0" y="1705.0">logic.piece.Piece.Move</node>
+    <node x="3451.833333333333" y="1182.0">ui.menu.TextBox</node>
+    <node x="7296.15072671639" y="1182.0">ui.game.MinimumSize.MinimumSizeDialog</node>
+    <node x="1881.1966245936146" y="1496.0">ui.game.Game.PauseButton</node>
+    <node x="1917.0" y="1593.0">ui.TerminalHandler</node>
+    <node x="699.1840600497226" y="1182.0">ui.game.menu.playerConfigs.OnlinePlayerConfig</node>
+    <node x="972.1333046471595" y="586.0">ui.BlockingThread</node>
+    <node x="5712.734060049723" y="1182.0">ui.input.TextInputKeyHandler</node>
+    <node x="617.0" y="1705.0">logic.piece.Chick</node>
+    <node x="2233.1966245936146" y="1496.0">ui.game.Game.PauseMenuEscapeHandler</node>
+    <node x="3306.1966245936146" y="1182.0">ui.game.Piece</node>
+    <node x="1446.1333046471595" y="798.0">ui.menu.Dialog</node>
+    <node x="8540.397590361446" y="1364.0">ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage</node>
+    <node x="1234.0" y="1593.0">ui.drawing.composition.Coordinate</node>
+    <node x="4737.734060049723" y="798.0">ui.drawing.DrawableBufferedSection</node>
+    <node x="2130.0" y="1593.0">ConsoleTest</node>
+    <node x="7595.247379996179" y="1182.0">ui.input.selection.layout.SelectableCentredSection</node>
+    <node x="5782.65072671639" y="950.0">ui.input.KeyHandler</node>
+    <node x="433.1340600497233" y="950.0">logic.player.ai.AIPlayer.AIMoveProcessor.AIMoveThread</node>
+    <node x="5326.734060049723" y="586.0">ui.drawing.composition.SectionComposer</node>
+    <node x="5514.734060049723" y="586.0">ui.input.selection.UnselectableSection</node>
+    <node x="279.29735131000416" y="1364.0">ui.game.menu.playerConfigs.PlayerConfig.NamedPlayerConfig</node>
+    <node x="8606.90072671639" y="798.0">ui.input.selection.UnselectableResponsiveSection</node>
+    <node x="2373.0973513100043" y="1182.0">ui.input.EscapeHandler</node>
+    <node x="41.25" y="1797.0">logic.player.ai.AIGame.Move</node>
+    <node x="173.93406004972258" y="586.0">logic.player.ai.AIPlayer</node>
+    <node x="4628.40072671639" y="586.0">ui.drawing.BufferedSection</node>
+    <node x="1672.2973513100042" y="1364.0">ui.game.Game</node>
+    <node x="6811.15072671639" y="798.0">ui.input.selection.layout.SelectableMinimumSizeSection</node>
+    <node x="5238.077576974568" y="1364.0">ui.game.MinimumSize.MinimumSizeDialog.Dialog</node>
+    <node x="7991.147590361446" y="1496.0">ui.game.menu.Player.ConfigButton</node>
+    <node x="6655.15072671639" y="798.0">ui.drawing.composition.SectionGrid</node>
+    <node x="3029.6966245936146" y="1182.0">ui.game.GameBoard.PromotionIndicator</node>
+    <node x="7115.15072671639" y="950.0">ui.drawing.layout.CentredSection</node>
+    <node x="4708.849971313827" y="950.0">ui.drawing.colour.ColouredString</node>
+    <node x="3525.5973513100043" y="798.0">ui.input.selection.SelectableGrid</node>
+    <node x="1109.7973513100042" y="1496.0">ui.game.Game.PauseMenu</node>
+    <node x="725.0" y="1705.0">logic.piece.Elephant</node>
+    <node x="6856.90072671639" y="950.0">ui.game.MinimumSize</node>
+    <node x="1895.1966245936146" y="1364.0">ui.menu.button.ChangeViewButton</node>
+    <node x="2625.1966245936146" y="1364.0">ui.input.ExitEscapeHandler</node>
+    <node x="6520.65072671639" y="586.0">ui.drawing.layout.MinimumSizeSection</node>
+    <node x="7941.65072671639" y="798.0">ui.drawing.composition.BasicSectionComposer</node>
+    <node x="5058.664046662845" y="950.0">ui.drawing.colour.ColouredChar</node>
+    <node x="1354.2973513100042" y="950.0">ui.menu.Menu</node>
+    <node x="3696.9840600497228" y="950.0">ui.input.selection.DrawableSelectableBufferedSection</node>
+    <node x="257.1340600497233" y="798.0">logic.player.SocketPlayer.ClientPlayer</node>
+    <node x="132.0" y="1899.0">logic.player.ai.AIGame.BoardPosition</node>
+    <node x="3455.9840600497228" y="950.0">ui.game.GameBoard</node>
+    <node x="1645.1966245936146" y="1496.0">ui.game.Game.PauseMenuResumeButton</node>
+    <node x="3576.833333333333" y="1182.0">ui.input.selection.SelectableBufferedGrid</node>
+    <node x="1548.2973513100042" y="1364.0">ui.game.menu.playerConfigs.OnlinePlayerConfig.PortBox</node>
+    <node x="795.0" y="1593.0">logic.piece.Piece</node>
+    <node x="8331.894970357625" y="950.0">ui.drawing.composition.BasicSectionGrid</node>
+    <node x="8686.397590361448" y="950.0">ui.drawing.composition.NoOverlapSectionComposer</node>
+    <node x="4931.234060049723" y="344.0">ui.input.selection.SelectableSection</node>
+    <node x="1330.1333046471595" y="798.0">ui.Reader</node>
+    <node x="6713.244243641235" y="1364.0">ui.input.MovementKeyHandler</node>
+    <node x="2037.1966245936146" y="1496.0">ui.game.Game.ExitToMenuButton</node>
+    <node x="6808.327576974569" y="0.0">ui.drawing.Section</node>
+    <node x="0.0" y="1899.0">logic.player.ai.AIGame.TakeMove</node>
+    <node x="8169.650726716391" y="798.0">ui.input.selection.layout.SelectableResponsiveBorderedSection</node>
+    <node x="176.86329126028158" y="1496.0">ui.game.menu.playerConfigs.HumanPlayerConfig</node>
+    <node x="8248.65072671639" y="586.0">ui.drawing.layout.ResponsiveBorderSection</node>
+    <node x="5930.65072671639" y="950.0">ui.drawing.colour.WrappingColouredString</node>
+    <node x="380.8632912602816" y="1496.0">ui.game.menu.playerConfigs.AIPlayerConfig</node>
+    <node x="695.2973513100042" y="1364.0">ui.game.menu.playerConfigs.ServerPlayerConfig</node>
+    <node x="92.75000000000001" y="1593.0">logic.Game</node>
+    <node x="2311.0" y="1593.0">ui.AnimalChess</node>
+    <node x="3954.2340600497228" y="798.0">ui.input.selection.SelectableBufferedSection</node>
+    <node x="1435.0" y="1593.0">ui.drawing.colour.ColouredStringBuilder</node>
+    <node x="140.0" y="950.0">logic.player.ai.AIPlayer.PlaceMove</node>
+    <node x="5210.734060049723" y="586.0">ui.drawing.layout.BorderSection.Border</node>
+    <node x="2492.0" y="1593.0">ui.drawing.colour.Colour</node>
+    <node x="451.88330464716" y="344.0">logic.player.Player</node>
+    <node x="4415.65072671639" y="162.0">ui.input.selection.SelectionHandler</node>
+    <node x="2590.1840600497226" y="1182.0">ui.menu.button.Button</node>
+    <node x="1696.0" y="1593.0">ui.drawing.colour.BackgroundColour</node>
+    <node x="8546.397590361446" y="1496.0">ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage.Handler</node>
+    <node x="2947.6966245936146" y="1496.0">ui.input.selection.MovementSelectionHandler</node>
+    <node x="7088.15072671639" y="162.0">ui.input.ResizeHandler</node>
+    <node x="304.0" y="1899.0">logic.player.ai.AIGame.HandPosition</node>
+    <node x="404.1840600497226" y="1182.0">ui.game.menu.playerConfigs.PlayerConfig</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ui.drawing.composition.OrderedSectionComposer" target="ui.drawing.composition.SectionComposer">
+      <point x="56.0" y="-26.0" />
+      <point x="4416.734060049723" y="768.0" />
+      <point x="5389.734060049723" y="768.0" />
+      <point x="-21.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.ClientPlayer" target="logic.player.SocketPlayer">
+      <point x="36.0" y="-26.0" />
+      <point x="365.1340600497233" y="768.0" />
+      <point x="779.8833046471591" y="768.0" />
+      <point x="-28.800000000000182" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.MinimumSizeSection" target="ui.drawing.layout.DrawableResponsiveSection">
+      <point x="-48.0" y="-26.0" />
+      <point x="6568.65072671639" y="556.0" />
+      <point x="7133.15072671639" y="556.0" />
+      <point x="-31.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.TakeMove" target="logic.player.ai.AIGame">
+      <point x="-28.0" y="-26.0" />
+      <point x="28.0" y="1874.0" />
+      <point x="30.75" y="1874.0" />
+      <point x="30.75" y="1767.0" />
+      <point x="150.35000000000002" y="1767.0" />
+      <point x="-38.400000000000006" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.PlaceMove" target="logic.player.ai.AIPlayer.Move">
+      <point x="-30.0" y="-26.0" />
+      <point x="20.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.GameMenu.EscapeHandler" target="ui.input.EscapeHandler">
+      <point x="38.0" y="-26.0" />
+      <point x="1490.2973513100042" y="1274.0" />
+      <point x="2388.297351310004" y="1274.0" />
+      <point x="-60.799999999999955" y="26.0" />
+    </edge>
+    <edge source="ui.input.TextInputKeyHandler" target="ui.input.KeyHandler">
+      <point x="0.0" y="-26.0" />
+      <point x="5812.734060049723" y="1162.0" />
+      <point x="5846.65072671639" y="1162.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game" target="logic.GameHandler">
+      <point x="-26.666666666666515" y="-26.0" />
+      <point x="1685.6306846433376" y="1264.0" />
+      <point x="1621.4166666666665" y="1264.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame" target="logic.Game">
+      <point x="0.0" y="-26.0" />
+      <point x="188.75" y="1670.0" />
+      <point x="152.75" y="1670.0" />
+      <point x="20.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer" target="logic.player.Player">
+      <point x="0.0" y="-26.0" />
+      <point x="808.6833046471593" y="546.0" />
+      <point x="538.2833046471596" y="546.0" />
+      <point x="38.40000000000009" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.DrawableSelectableBufferedSection" target="ui.drawing.BufferedSection">
+      <point x="0.0" y="-26.0" />
+      <point x="3852.9840600497228" y="718.0" />
+      <point x="4637.734060049724" y="718.0" />
+      <point x="-74.66666666666606" y="26.0" />
+    </edge>
+    <edge source="ui.menu.LabeledMenuItem" target="ui.menu.MenuItem">
+      <point x="56.0" y="-26.0" />
+      <point x="7459.3949703576245" y="1334.0" />
+      <point x="7873.914046662845" y="1334.0" />
+      <point x="-37.33333333333303" y="26.0" />
+    </edge>
+    <edge source="ui.menu.MenuString" target="ui.menu.MenuItem">
+      <point x="-32.0" y="-26.0" />
+      <point x="8229.814257028112" y="1344.0" />
+      <point x="7948.580713329511" y="1344.0" />
+      <point x="37.33333333333303" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game" target="ui.input.selection.SelectableGrid">
+      <point x="0.0" y="-26.0" />
+      <point x="1712.2973513100042" y="1264.0" />
+      <point x="1731.7799579269476" y="1264.0" />
+      <point x="1731.7799579269476" y="1092.0" />
+      <point x="3445.4840600497228" y="1092.0" />
+      <point x="3445.4840600497228" y="920.0" />
+      <point x="3545.5973513100043" y="920.0" />
+      <point x="-60.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.Button" target="ui.input.selection.SelectableSection">
+      <point x="24.0" y="-26.0" />
+      <point x="2662.1840600497226" y="1072.0" />
+      <point x="3372.0973513100043" y="1072.0" />
+      <point x="3372.0973513100043" y="526.0" />
+      <point x="4969.567393383056" y="526.0" />
+      <point x="-53.66666666666697" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableBorderedSection" target="ui.drawing.layout.BorderSection">
+      <point x="82.66666666666697" y="-26.0" />
+      <point x="5128.90072671639" y="486.0" />
+      <point x="5633.333333333334" y="486.0" />
+      <point x="-50.66666666666606" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.WrappingColouredString" target="ui.drawing.colour.ColouredElement">
+      <point x="74.66666666666606" y="-26.0" />
+      <point x="6117.317393383056" y="930.0" />
+      <point x="6137.15072671639" y="930.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableGrid" target="ui.input.selection.SelectableSection">
+      <point x="-20.0" y="-26.0" />
+      <point x="3585.5973513100043" y="778.0" />
+      <point x="3614.5973513100043" y="778.0" />
+      <point x="3614.5973513100043" y="536.0" />
+      <point x="4984.90072671639" y="536.0" />
+      <point x="-38.33333333333303" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.OrderedSectionComposer" target="ui.drawing.Section">
+      <point x="-56.0" y="-26.0" />
+      <point x="4304.734060049723" y="92.0" />
+      <point x="6812.041862688855" y="92.0" />
+      <point x="-48.285714285713766" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.HumanPlayerConfig" target="ui.game.menu.playerConfigs.PlayerConfig.NamedPlayerConfig">
+      <point x="0.0" y="-26.0" />
+      <point x="268.8632912602816" y="1476.0" />
+      <point x="325.29735131000416" y="1476.0" />
+      <point x="-46.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.Menu" target="ui.menu.Dialog">
+      <point x="0.0" y="-26.0" />
+      <point x="1394.2973513100042" y="930.0" />
+      <point x="1513.3333046471594" y="930.0" />
+      <point x="19.199999999999818" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableBufferedGrid" target="ui.input.selection.SelectableBufferedSection">
+      <point x="-28.0" y="-26.0" />
+      <point x="3660.833333333333" y="1142.0" />
+      <point x="4072.7340600497228" y="1142.0" />
+      <point x="4072.7340600497228" y="930.0" />
+      <point x="4047.2340600497228" y="930.0" />
+      <point x="-31.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableBufferedGrid" target="ui.input.selection.SelectableGrid">
+      <point x="-84.0" y="-26.0" />
+      <point x="3604.833333333333" y="1102.0" />
+      <point x="3686.4840600497228" y="1102.0" />
+      <point x="3686.4840600497228" y="930.0" />
+      <point x="3665.5973513100043" y="930.0" />
+      <point x="60.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.LabeledMenuItem" target="ui.drawing.composition.BasicSectionComposer">
+      <point x="0.0" y="-26.0" />
+      <point x="7403.3949703576245" y="1314.0" />
+      <point x="7285.65072671639" y="1314.0" />
+      <point x="7285.65072671639" y="930.0" />
+      <point x="7993.65072671639" y="930.0" />
+      <point x="-52.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage" target="ui.game.MinimumSize.MinimumSizeDialog">
+      <point x="-42.0" y="-26.0" />
+      <point x="8582.397590361446" y="1254.0" />
+      <point x="7434.15072671639" y="1254.0" />
+      <point x="46.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage.Handler" target="ui.input.MovementKeyHandler">
+      <point x="-26.0" y="-26.0" />
+      <point x="8572.397590361446" y="1466.0" />
+      <point x="6873.244243641235" y="1466.0" />
+      <point x="64.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.DrawableResponsiveSection" target="ui.drawing.layout.ResponsiveSection">
+      <point x="82.66666666666697" y="-26.0" />
+      <point x="7246.817393383057" y="314.0" />
+      <point x="7832.256148403139" y="314.0" />
+      <point x="-52.57142857142935" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableResponsiveSection" target="ui.input.selection.layout.SelectableResponsiveSection">
+      <point x="0.0" y="-26.0" />
+      <point x="8746.90072671639" y="658.0" />
+      <point x="7934.327576974569" y="658.0" />
+      <point x="115.5" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.ColouredChar" target="ui.drawing.BufferedSection">
+      <point x="-48.0" y="-26.0" />
+      <point x="5082.664046662845" y="900.0" />
+      <point x="4727.234060049723" y="900.0" />
+      <point x="4727.234060049723" y="748.0" />
+      <point x="4731.067393383056" y="748.0" />
+      <point x="18.66666666666606" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.MovementSelectionHandler" target="ui.input.MovementKeyHandler">
+      <point x="60.0" y="-26.0" />
+      <point x="3127.6966245936146" y="1466.0" />
+      <point x="6745.244243641235" y="1466.0" />
+      <point x="-64.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.GameBoard.PromotionIndicator" target="ui.game.GameBoard">
+      <point x="-48.0" y="-26.0" />
+      <point x="3077.6966245936146" y="1102.0" />
+      <point x="3515.9840600497228" y="1102.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableCentredSection" target="ui.input.selection.SelectableSection">
+      <point x="-80.0" y="-26.0" />
+      <point x="7635.247379996179" y="1142.0" />
+      <point x="7104.65072671639" y="1142.0" />
+      <point x="7104.65072671639" y="446.0" />
+      <point x="5092.234060049723" y="446.0" />
+      <point x="69.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableSection" target="ui.input.selection.SelectableSection">
+      <point x="-66.66666666666697" y="-26.0" />
+      <point x="5548.067393383056" y="476.0" />
+      <point x="5061.567393383056" y="476.0" />
+      <point x="38.33333333333303" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.ResponsiveBorderSection" target="ui.drawing.layout.ResponsiveSection">
+      <point x="29.0" y="-26.0" />
+      <point x="8393.65072671639" y="566.0" />
+      <point x="8389.894970357625" y="566.0" />
+      <point x="8389.894970357625" y="284.0" />
+      <point x="7911.1132912602825" y="284.0" />
+      <point x="26.285714285713766" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.ColouredString" target="ui.drawing.colour.ColouredElement">
+      <point x="53.33333333333303" y="-26.0" />
+      <point x="4842.18330464716" y="920.0" />
+      <point x="6069.95072671639" y="920.0" />
+      <point x="-67.19999999999982" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableBorderedSection" target="ui.input.selection.SelectableSection">
+      <point x="-82.66666666666697" y="-26.0" />
+      <point x="4963.567393383056" y="566.0" />
+      <point x="5030.90072671639" y="566.0" />
+      <point x="7.66666666666697" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.ResponsiveBorderSection" target="ui.drawing.layout.BorderSection">
+      <point x="-87.0" y="-26.0" />
+      <point x="8277.65072671639" y="416.0" />
+      <point x="5734.666666666666" y="416.0" />
+      <point x="50.66666666666606" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.ColouredChar" target="ui.drawing.colour.ColouredElement">
+      <point x="48.0" y="-26.0" />
+      <point x="5178.664046662845" y="930.0" />
+      <point x="6103.550726716389" y="930.0" />
+      <point x="-33.600000000000364" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.BoardPosition" target="logic.player.ai.AIGame.Position">
+      <point x="38.0" y="-26.0" />
+      <point x="246.0" y="1874.0" />
+      <point x="265.0" y="1874.0" />
+      <point x="-28.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.MenuButton" target="ui.menu.MenuItem">
+      <point x="42.66666666666697" y="-26.0" />
+      <point x="7697.3116370242915" y="1344.0" />
+      <point x="7911.247379996179" y="1344.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.LabeledMenuItem" target="ui.input.selection.SelectableSection">
+      <point x="-56.0" y="-26.0" />
+      <point x="7347.3949703576245" y="1324.0" />
+      <point x="6510.15072671639" y="1324.0" />
+      <point x="6510.15072671639" y="456.0" />
+      <point x="5076.90072671639" y="456.0" />
+      <point x="53.66666666666697" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.DrawableSelectableBufferedSection" target="ui.input.selection.SelectableBufferedSection">
+      <point x="104.0" y="-26.0" />
+      <point x="3956.9840600497228" y="930.0" />
+      <point x="3985.2340600497228" y="930.0" />
+      <point x="-93.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableBufferedSection" target="ui.drawing.BufferedSection">
+      <point x="62.0" y="-26.0" />
+      <point x="4140.234060049723" y="728.0" />
+      <point x="4656.40072671639" y="728.0" />
+      <point x="-56.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.OnlinePlayerConfig.PortBox" target="ui.menu.TextBox">
+      <point x="26.0" y="-26.0" />
+      <point x="1626.2973513100042" y="1324.0" />
+      <point x="3477.833333333333" y="1324.0" />
+      <point x="-26.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.ServerPlayerConfig" target="ui.game.menu.playerConfigs.PlayerConfig">
+      <point x="-48.0" y="-26.0" />
+      <point x="743.2973513100042" y="1334.0" />
+      <point x="530.1840600497226" y="1334.0" />
+      <point x="54.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.TakeMove" target="logic.player.ai.AIGame.Move">
+      <point x="28.0" y="-26.0" />
+      <point x="84.0" y="1874.0" />
+      <point x="81.25" y="1874.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.NoOverlapSectionComposer" target="ui.drawing.composition.BasicSectionComposer">
+      <point x="-60.0" y="-26.0" />
+      <point x="8746.397590361448" y="890.0" />
+      <point x="8097.65072671639" y="890.0" />
+      <point x="52.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.GameMenu" target="ui.menu.Menu">
+      <point x="0.0" y="-26.0" />
+      <point x="20.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.GameBoard.PromotionIndicator" target="ui.input.selection.DrawableSelectableBufferedSection">
+      <point x="48.0" y="-26.0" />
+      <point x="3173.6966245936146" y="1112.0" />
+      <point x="3748.9840600497228" y="1112.0" />
+      <point x="-104.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.TextBox.KeyHandler.MovementKeyHandler" target="ui.menu.TextBox.KeyHandler">
+      <point x="-48.0" y="-26.0" />
+      <point x="5819.984060049723" y="1456.0" />
+      <point x="4414.279957926949" y="1456.0" />
+      <point x="32.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.HandPosition" target="logic.player.ai.AIGame.Position">
+      <point x="-36.0" y="-26.0" />
+      <point x="340.0" y="1874.0" />
+      <point x="321.0" y="1874.0" />
+      <point x="28.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.MenuItem" target="ui.input.selection.layout.SelectableResponsiveSection">
+      <point x="0.0" y="-26.0" />
+      <point x="7911.247379996179" y="778.0" />
+      <point x="7835.327576974569" y="778.0" />
+      <point x="16.5" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.DrawableSelectableBufferedSection" target="ui.input.selection.DrawableSelectableSection">
+      <point x="-104.0" y="-26.0" />
+      <point x="3748.9840600497228" y="930.0" />
+      <point x="3826.3473513100043" y="930.0" />
+      <point x="3826.3473513100043" y="748.0" />
+      <point x="3336.797351310004" y="748.0" />
+      <point x="99.19999999999982" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BasicSectionGrid" target="ui.drawing.composition.SectionGrid">
+      <point x="-44.0" y="-26.0" />
+      <point x="8375.894970357625" y="900.0" />
+      <point x="6757.15072671639" y="900.0" />
+      <point x="34.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.BufferedSection" target="ui.drawing.Section">
+      <point x="0.0" y="-26.0" />
+      <point x="4712.40072671639" y="102.0" />
+      <point x="6819.470434117426" y="102.0" />
+      <point x="-40.85714285714312" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize" target="ui.input.selection.layout.SelectableResponsiveSection">
+      <point x="34.0" y="-26.0" />
+      <point x="6958.90072671639" y="930.0" />
+      <point x="7093.65072671639" y="930.0" />
+      <point x="7093.65072671639" y="768.0" />
+      <point x="7769.327576974569" y="768.0" />
+      <point x="-49.5" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.HandPosition" target="logic.player.ai.AIGame">
+      <point x="36.0" y="-26.0" />
+      <point x="412.0" y="1874.0" />
+      <point x="395.25" y="1874.0" />
+      <point x="395.25" y="1767.0" />
+      <point x="227.15000000000003" y="1767.0" />
+      <point x="38.400000000000034" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.ServerPlayerConfig" target="ui.game.menu.playerConfigs.OnlinePlayerConfig">
+      <point x="48.0" y="-26.0" />
+      <point x="839.2973513100042" y="1344.0" />
+      <point x="795.1840600497226" y="1344.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.ColouredString" target="ui.drawing.BufferedSection">
+      <point x="0.0" y="-26.0" />
+      <point x="4788.849971313827" y="910.0" />
+      <point x="4716.234060049723" y="910.0" />
+      <point x="4716.234060049723" y="748.0" />
+      <point x="4712.40072671639" y="748.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.Reader" target="ui.BlockingThread">
+      <point x="0.0" y="-26.0" />
+      <point x="1378.1333046471595" y="718.0" />
+      <point x="1112.1333046471595" y="718.0" />
+      <point x="60.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.OrderedCoordinate" target="ui.drawing.composition.Coordinate">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.GameMenu.EscapeHandler" target="ui.game.menu.GameMenu">
+      <point x="-38.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BufferedSectionComposer" target="ui.drawing.BufferedSection">
+      <point x="0.0" y="-26.0" />
+      <point x="4506.516637980493" y="930.0" />
+      <point x="4500.234060049723" y="930.0" />
+      <point x="4500.234060049723" y="748.0" />
+      <point x="4693.734060049724" y="748.0" />
+      <point x="-18.66666666666606" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.SectionGrid" target="ui.drawing.Section">
+      <point x="45.33333333333394" y="-26.0" />
+      <point x="6768.484060049724" y="778.0" />
+      <point x="6896.615012430676" y="778.0" />
+      <point x="6896.615012430676" y="122.0" />
+      <point x="6871.470434117426" y="122.0" />
+      <point x="11.142857142856883" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.Position" target="logic.player.ai.AIGame">
+      <point x="0.0" y="-26.0" />
+      <point x="293.0" y="1777.0" />
+      <point x="207.95000000000005" y="1777.0" />
+      <point x="19.200000000000045" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BasicSectionComposer" target="ui.drawing.layout.DrawableResponsiveSection">
+      <point x="0.0" y="-26.0" />
+      <point x="8045.65072671639" y="768.0" />
+      <point x="8204.5" y="768.0" />
+      <point x="8204.5" y="426.0" />
+      <point x="7257.15072671639" y="426.0" />
+      <point x="93.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.WrappingColouredString" target="ui.drawing.layout.ResponsiveSection">
+      <point x="0.0" y="-26.0" />
+      <point x="6042.65072671639" y="536.0" />
+      <point x="6885.615012430676" y="536.0" />
+      <point x="6885.615012430676" y="304.0" />
+      <point x="7805.970434117426" y="304.0" />
+      <point x="-78.85714285714312" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableGrid" target="ui.drawing.composition.SectionComposer">
+      <point x="60.0" y="-26.0" />
+      <point x="3665.5973513100043" y="758.0" />
+      <point x="5347.734060049723" y="758.0" />
+      <point x="-63.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableSection" target="ui.drawing.DrawableSection">
+      <point x="0.0" y="-26.0" />
+      <point x="5614.734060049723" y="466.0" />
+      <point x="5393.484060049723" y="466.0" />
+      <point x="5393.484060049723" y="284.0" />
+      <point x="5297.680684643338" y="284.0" />
+      <point x="10.5" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.ChangeViewButton" target="ui.menu.button.Button">
+      <point x="66.0" y="-26.0" />
+      <point x="2049.1966245936146" y="1304.0" />
+      <point x="2602.1840600497226" y="1304.0" />
+      <point x="-36.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.ExitToMenuButton" target="ui.menu.button.ChangeViewButton">
+      <point x="44.0" y="-26.0" />
+      <point x="2169.1966245936146" y="1446.0" />
+      <point x="2041.8632912602811" y="1446.0" />
+      <point x="58.666666666666515" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.ExitToMenuButton" target="ui.game.Game">
+      <point x="-44.0" y="-26.0" />
+      <point x="2081.1966245936146" y="1456.0" />
+      <point x="1732.2973513100042" y="1456.0" />
+      <point x="20.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.DrawableBufferedSection" target="ui.drawing.BufferedSection">
+      <point x="-58.0" y="-26.0" />
+      <point x="4795.734060049723" y="748.0" />
+      <point x="4749.734060049724" y="748.0" />
+      <point x="37.33333333333394" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage" target="ui.input.selection.UnselectableResponsiveSection">
+      <point x="42.0" y="-26.0" />
+      <point x="8666.397590361446" y="930.0" />
+      <point x="8816.90072671639" y="930.0" />
+      <point x="69.99999999999955" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.ServerPlayer" target="logic.player.SocketPlayer">
+      <point x="-36.0" y="-26.0" />
+      <point x="841.6340600497228" y="768.0" />
+      <point x="808.6833046471593" y="768.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.SectionGrid" target="ui.drawing.DrawableSection">
+      <point x="0.0" y="-26.0" />
+      <point x="6723.15072671639" y="264.0" />
+      <point x="5339.680684643338" y="264.0" />
+      <point x="52.5" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.SectionGrid" target="ui.drawing.composition.SectionComposer">
+      <point x="-45.33333333333394" y="-26.0" />
+      <point x="6677.817393383056" y="718.0" />
+      <point x="5431.734060049723" y="718.0" />
+      <point x="21.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BufferedSectionGrid" target="ui.drawing.composition.SectionGrid">
+      <point x="50.0" y="-26.0" />
+      <point x="6449.65072671639" y="930.0" />
+      <point x="6689.15072671639" y="930.0" />
+      <point x="-34.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableSection.Handler" target="ui.input.selection.UnselectableSection">
+      <point x="-26.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.TextBox.KeyHandler" target="ui.input.TextInputKeyHandler">
+      <point x="32.0" y="-26.0" />
+      <point x="4414.279957926949" y="1334.0" />
+      <point x="5812.734060049723" y="1334.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.MovementKeyHandler" target="ui.input.KeyHandler">
+      <point x="0.0" y="-26.0" />
+      <point x="6809.244243641235" y="1334.0" />
+      <point x="6127.25" y="1334.0" />
+      <point x="6127.25" y="1162.0" />
+      <point x="5889.317393383057" y="1162.0" />
+      <point x="42.666666666666515" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableResponsiveSection" target="ui.input.selection.UnselectableSection">
+      <point x="-93.33333333333303" y="-26.0" />
+      <point x="8653.567393383057" y="668.0" />
+      <point x="5681.40072671639" y="668.0" />
+      <point x="66.66666666666697" y="26.0" />
+    </edge>
+    <edge source="ui.menu.TextBox.KeyHandler.EscapeHandler" target="ui.input.EscapeHandler">
+      <point x="-38.0" y="-26.0" />
+      <point x="3251.583333333333" y="1274.0" />
+      <point x="2509.8973513100045" y="1274.0" />
+      <point x="60.80000000000018" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableCentredSection" target="ui.drawing.layout.CentredSection">
+      <point x="0.0" y="-26.0" />
+      <point x="7715.247379996179" y="1132.0" />
+      <point x="7195.15072671639" y="1132.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.Player.CopyOfPlayer" target="logic.player.Player">
+      <point x="-36.0" y="-26.0" />
+      <point x="608.6833046471593" y="566.0" />
+      <point x="499.88330464716" y="566.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.AIPlayerConfig" target="ui.game.menu.playerConfigs.PlayerConfig.NamedPlayerConfig">
+      <point x="0.0" y="-26.0" />
+      <point x="460.8632912602816" y="1476.0" />
+      <point x="417.29735131000416" y="1476.0" />
+      <point x="46.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize" target="ui.input.selection.layout.SelectableMinimumSizeSection">
+      <point x="-34.0" y="-26.0" />
+      <point x="6890.90072671639" y="930.0" />
+      <point x="6879.15072671639" y="930.0" />
+      <point x="-68.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.ColouredChar" target="ui.drawing.DrawableSection">
+      <point x="0.0" y="-26.0" />
+      <point x="5130.664046662845" y="910.0" />
+      <point x="5180.734060049723" y="910.0" />
+      <point x="5180.734060049723" y="284.0" />
+      <point x="5276.680684643338" y="284.0" />
+      <point x="-10.5" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseMenuEscapeHandler" target="ui.input.EscapeHandler">
+      <point x="56.0" y="-26.0" />
+      <point x="2401.1966245936146" y="1294.0" />
+      <point x="2449.0973513100043" y="1294.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.NoOverlapSectionComposer" target="ui.drawing.Section">
+      <point x="60.0" y="-26.0" />
+      <point x="8866.397590361448" y="930.0" />
+      <point x="8952.40072671639" y="930.0" />
+      <point x="8952.40072671639" y="72.0" />
+      <point x="6908.6132912602825" y="72.0" />
+      <point x="48.285714285713766" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableResponsiveSection" target="ui.drawing.layout.ResponsiveSection">
+      <point x="93.33333333333348" y="-26.0" />
+      <point x="8840.234060049723" y="778.0" />
+      <point x="8801.90072671639" y="778.0" />
+      <point x="8801.90072671639" y="264.0" />
+      <point x="7963.684719831712" y="264.0" />
+      <point x="78.85714285714312" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseMenuResumeButton" target="ui.game.Game">
+      <point x="-54.0" y="-26.0" />
+      <point x="1699.1966245936146" y="1476.0" />
+      <point x="1705.6306846433376" y="1476.0" />
+      <point x="-6.666666666666515" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.GameStartButton" target="ui.menu.button.Button">
+      <point x="0.0" y="-26.0" />
+      <point x="2913.1966245936146" y="1284.0" />
+      <point x="2650.1840600497226" y="1284.0" />
+      <point x="12.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.Filler" target="ui.drawing.BufferedSection">
+      <point x="0.0" y="-26.0" />
+      <point x="6231.65072671639" y="738.0" />
+      <point x="4768.40072671639" y="738.0" />
+      <point x="56.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage.Handler" target="ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage">
+      <point x="26.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.CentredSection" target="ui.drawing.Section">
+      <point x="53.33333333333394" y="-26.0" />
+      <point x="7248.484060049724" y="920.0" />
+      <point x="7412.5" y="920.0" />
+      <point x="7412.5" y="112.0" />
+      <point x="6878.899005545998" y="112.0" />
+      <point x="18.57142857142935" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableBufferedSection" target="ui.input.selection.UnselectableSection">
+      <point x="88.0" y="-26.0" />
+      <point x="4326.516637980493" y="930.0" />
+      <point x="4483.234060049723" y="930.0" />
+      <point x="4483.234060049723" y="778.0" />
+      <point x="5548.067393383056" y="778.0" />
+      <point x="-66.66666666666697" y="26.0" />
+    </edge>
+    <edge source="ui.input.ExitEscapeHandler" target="ui.input.EscapeHandler">
+      <point x="0.0" y="-26.0" />
+      <point x="2717.1966245936146" y="1294.0" />
+      <point x="2479.4973513100044" y="1294.0" />
+      <point x="30.40000000000009" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.WrappingColouredString" target="ui.drawing.DrawableBufferedSection">
+      <point x="-74.66666666666606" y="-26.0" />
+      <point x="5967.984060049724" y="890.0" />
+      <point x="4911.734060049723" y="890.0" />
+      <point x="58.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.BorderSection" target="ui.drawing.DrawableSection">
+      <point x="-38.0" y="-26.0" />
+      <point x="5646.0" y="274.0" />
+      <point x="5318.680684643338" y="274.0" />
+      <point x="31.5" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.PlayerConfig.NamedPlayerConfig" target="ui.game.menu.playerConfigs.PlayerConfig">
+      <point x="46.0" y="-26.0" />
+      <point x="417.29735131000416" y="1344.0" />
+      <point x="458.1840600497226" y="1344.0" />
+      <point x="-18.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseMenuEscapeHandler" target="ui.game.Game">
+      <point x="-56.0" y="-26.0" />
+      <point x="2289.1966245936146" y="1436.0" />
+      <point x="1745.6306846433376" y="1436.0" />
+      <point x="33.333333333333485" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.BorderSection" target="ui.drawing.Section">
+      <point x="38.0" y="-26.0" />
+      <point x="5722.0" y="132.0" />
+      <point x="6841.756148403139" y="132.0" />
+      <point x="-18.57142857142935" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BufferedSectionComposer" target="ui.drawing.composition.OrderedSectionComposer">
+      <point x="-77.33333333333394" y="-26.0" />
+      <point x="4429.183304647159" y="920.0" />
+      <point x="4360.734060049723" y="920.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.DrawableSection" target="ui.drawing.PrintHandler">
+      <point x="-42.0" y="-26.0" />
+      <point x="5245.180684643338" y="82.0" />
+      <point x="4218.029957926949" y="82.0" />
+      <point x="36.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableSection" target="ui.drawing.Section">
+      <point x="66.66666666666697" y="-26.0" />
+      <point x="5681.40072671639" y="526.0" />
+      <point x="6874.615012430676" y="526.0" />
+      <point x="6874.615012430676" y="132.0" />
+      <point x="6864.041862688855" y="132.0" />
+      <point x="3.714285714286234" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog.Dialog" target="ui.menu.Dialog">
+      <point x="-24.0" y="-26.0" />
+      <point x="5262.077576974568" y="1314.0" />
+      <point x="3811.333333333333" y="1314.0" />
+      <point x="3811.333333333333" y="1022.0" />
+      <point x="2740.047351310004" y="1022.0" />
+      <point x="2740.047351310004" y="930.0" />
+      <point x="1532.5333046471596" y="930.0" />
+      <point x="38.40000000000009" y="26.0" />
+    </edge>
+    <edge source="ui.menu.TextBox.KeyHandler.EscapeHandler" target="ui.menu.TextBox.KeyHandler">
+      <point x="38.0" y="-26.0" />
+      <point x="3327.583333333333" y="1456.0" />
+      <point x="4350.279957926949" y="1456.0" />
+      <point x="-32.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Hand" target="ui.input.selection.SelectableGrid">
+      <point x="0.0" y="-26.0" />
+      <point x="3635.9840600497228" y="930.0" />
+      <point x="3625.5973513100043" y="930.0" />
+      <point x="20.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableMinimumSizeSection" target="ui.input.selection.layout.SelectableResponsiveSection">
+      <point x="90.66666666666697" y="-26.0" />
+      <point x="7037.817393383057" y="758.0" />
+      <point x="7736.327576974569" y="758.0" />
+      <point x="-82.5" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BasicSectionComposer" target="ui.drawing.composition.SectionComposer">
+      <point x="-69.33333333333394" y="-26.0" />
+      <point x="7976.317393383056" y="698.0" />
+      <point x="5473.734060049723" y="698.0" />
+      <point x="63.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.Button" target="ui.input.selection.DrawableSelectableSection">
+      <point x="-24.0" y="-26.0" />
+      <point x="2614.1840600497226" y="1062.0" />
+      <point x="3151.0973513100043" y="1062.0" />
+      <point x="3151.0973513100043" y="778.0" />
+      <point x="3187.9973513100044" y="778.0" />
+      <point x="-49.59999999999991" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableGrid" target="ui.input.selection.DrawableSelectableSection">
+      <point x="-60.0" y="-26.0" />
+      <point x="3545.5973513100043" y="778.0" />
+      <point x="3287.1973513100043" y="778.0" />
+      <point x="49.59999999999991" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.colour.ColouredString" target="ui.drawing.DrawableSection">
+      <point x="-53.33333333333303" y="-26.0" />
+      <point x="4735.516637980494" y="920.0" />
+      <point x="4562.65072671639" y="920.0" />
+      <point x="4562.65072671639" y="264.0" />
+      <point x="5234.680684643338" y="264.0" />
+      <point x="-52.5" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.DrawableBufferedSection" target="ui.drawing.DrawableSection">
+      <point x="58.0" y="-26.0" />
+      <point x="4911.734060049723" y="274.0" />
+      <point x="5255.680684643338" y="274.0" />
+      <point x="-31.5" y="26.0" />
+    </edge>
+    <edge source="ui.game.Piece" target="ui.input.selection.DrawableSelectableBufferedSection">
+      <point x="0.0" y="-26.0" />
+      <point x="3350.1966245936146" y="1122.0" />
+      <point x="3852.9840600497228" y="1122.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.PlayerConfig" target="ui.menu.Menu">
+      <point x="0.0" y="-26.0" />
+      <point x="476.1840600497226" y="1162.0" />
+      <point x="1374.2973513100042" y="1162.0" />
+      <point x="-20.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.Move" target="logic.player.ai.AIPlayer">
+      <point x="0.0" y="-26.0" />
+      <point x="150.0" y="768.0" />
+      <point x="215.93406004972258" y="768.0" />
+      <point x="-14.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableResponsiveBorderedSection" target="ui.drawing.layout.ResponsiveBorderSection">
+      <point x="109.33333333333303" y="-26.0" />
+      <point x="8442.984060049723" y="778.0" />
+      <point x="8364.65072671639" y="778.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.AIMoveProcessor" target="logic.player.ai.AIPlayer">
+      <point x="-42.0" y="-26.0" />
+      <point x="463.1340600497233" y="748.0" />
+      <point x="271.9340600497226" y="748.0" />
+      <point x="42.0" y="26.0" />
+    </edge>
+    <edge source="logic.piece.Giraffe" target="logic.piece.Piece">
+      <point x="0.0" y="-26.0" />
+      <point x="545.0" y="1665.0" />
+      <point x="802.3333333333334" y="1665.0" />
+      <point x="-36.66666666666663" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BasicSectionComposer" target="ui.drawing.Section">
+      <point x="69.33333333333394" y="-26.0" />
+      <point x="8114.984060049724" y="778.0" />
+      <point x="8215.5" y="778.0" />
+      <point x="8215.5" y="92.0" />
+      <point x="6893.756148403139" y="92.0" />
+      <point x="33.42857142857065" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableBufferedSection" target="ui.input.selection.SelectableSection">
+      <point x="-62.0" y="-26.0" />
+      <point x="4016.2340600497228" y="556.0" />
+      <point x="5015.567393383056" y="556.0" />
+      <point x="-7.66666666666697" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BufferedSectionComposer" target="ui.drawing.DrawableBufferedSection">
+      <point x="77.33333333333394" y="-26.0" />
+      <point x="4583.849971313827" y="930.0" />
+      <point x="4795.734060049723" y="930.0" />
+      <point x="-58.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.BoardMove" target="logic.player.ai.AIPlayer.Move">
+      <point x="30.0" y="-26.0" />
+      <point x="90.0" y="930.0" />
+      <point x="130.0" y="930.0" />
+      <point x="-20.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.ExitButton" target="ui.menu.button.Button">
+      <point x="0.0" y="-26.0" />
+      <point x="2541.1966245936146" y="1314.0" />
+      <point x="2626.1840600497226" y="1314.0" />
+      <point x="-12.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.Filler" target="ui.drawing.layout.DrawableResponsiveSection">
+      <point x="32.0" y="-26.0" />
+      <point x="6263.65072671639" y="930.0" />
+      <point x="6290.65072671639" y="930.0" />
+      <point x="6290.65072671639" y="546.0" />
+      <point x="7071.15072671639" y="546.0" />
+      <point x="-93.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BasicSectionGrid" target="ui.drawing.Section">
+      <point x="44.0" y="-26.0" />
+      <point x="8463.894970357625" y="910.0" />
+      <point x="8590.40072671639" y="910.0" />
+      <point x="8590.40072671639" y="82.0" />
+      <point x="6901.184719831712" y="82.0" />
+      <point x="40.85714285714312" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.ChangeViewButton" target="ui.input.ResizeHandler">
+      <point x="-22.0" y="-26.0" />
+      <point x="1961.1966245936146" y="1264.0" />
+      <point x="1952.3507267163895" y="1264.0" />
+      <point x="1952.3507267163895" y="1042.0" />
+      <point x="2766.5973513100043" y="1042.0" />
+      <point x="2766.5973513100043" y="294.0" />
+      <point x="7113.484060049723" y="294.0" />
+      <point x="-50.66666666666697" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableSection" target="ui.input.selection.SelectionHandler">
+      <point x="-46.0" y="-26.0" />
+      <point x="4977.234060049723" y="244.0" />
+      <point x="4547.65072671639" y="244.0" />
+      <point x="44.0" y="26.0" />
+    </edge>
+    <edge source="logic.piece.Lion" target="logic.piece.Piece">
+      <point x="0.0" y="-26.0" />
+      <point x="997.0" y="1675.0" />
+      <point x="861.0" y="1675.0" />
+      <point x="22.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.SectionComposer" target="ui.drawing.Section">
+      <point x="-42.0" y="-26.0" />
+      <point x="5368.734060049723" y="506.0" />
+      <point x="5782.25" y="506.0" />
+      <point x="5782.25" y="142.0" />
+      <point x="6849.184719831712" y="142.0" />
+      <point x="-11.142857142856883" y="26.0" />
+    </edge>
+    <edge source="ui.game.Hand.BorderedPiece" target="ui.game.Hand">
+      <point x="-38.0" y="-26.0" />
+      <point x="3465.083333333333" y="1334.0" />
+      <point x="3566.333333333333" y="1334.0" />
+      <point x="3566.333333333333" y="1092.0" />
+      <point x="3635.9840600497228" y="1092.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Hand.BorderedPiece" target="ui.input.selection.SelectableBufferedGrid">
+      <point x="38.0" y="-26.0" />
+      <point x="3541.083333333333" y="1344.0" />
+      <point x="3688.833333333333" y="1344.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.ResponsiveBorderSection" target="ui.input.ResizeHandler">
+      <point x="-29.0" y="-26.0" />
+      <point x="8335.65072671639" y="566.0" />
+      <point x="8378.894970357625" y="566.0" />
+      <point x="8378.894970357625" y="294.0" />
+      <point x="7214.817393383057" y="294.0" />
+      <point x="50.66666666666697" y="26.0" />
+    </edge>
+    <edge source="logic.piece.Elephant" target="logic.piece.Piece">
+      <point x="0.0" y="-26.0" />
+      <point x="781.0" y="1685.0" />
+      <point x="831.6666666666666" y="1685.0" />
+      <point x="-7.333333333333371" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.Player.ConfigButton" target="ui.game.menu.Player">
+      <point x="36.0" y="-26.0" />
+      <point x="8099.147590361446" y="1476.0" />
+      <point x="8129.147590361446" y="1476.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.MenuString" target="ui.input.selection.UnselectableResponsiveSection">
+      <point x="32.0" y="-26.0" />
+      <point x="8293.814257028112" y="1344.0" />
+      <point x="8518.394970357625" y="1344.0" />
+      <point x="8518.394970357625" y="920.0" />
+      <point x="8676.90072671639" y="920.0" />
+      <point x="-70.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.HumanPlayer" target="logic.player.Player">
+      <point x="0.0" y="-26.0" />
+      <point x="85.93406004972258" y="556.0" />
+      <point x="461.48330464716037" y="556.0" />
+      <point x="-38.40000000000009" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseMenuResumeButton" target="ui.menu.button.ChangeViewButton">
+      <point x="54.0" y="-26.0" />
+      <point x="1807.1966245936146" y="1476.0" />
+      <point x="1924.529957926948" y="1476.0" />
+      <point x="-58.666666666666515" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.MovementSelectionHandler" target="ui.input.selection.SelectionHandler">
+      <point x="-60.0" y="-26.0" />
+      <point x="3007.6966245936146" y="1082.0" />
+      <point x="3424.7340600497228" y="1082.0" />
+      <point x="3424.7340600497228" y="244.0" />
+      <point x="4459.65072671639" y="244.0" />
+      <point x="-44.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.BoardPosition" target="logic.player.ai.AIGame">
+      <point x="-38.0" y="-26.0" />
+      <point x="170.0" y="1874.0" />
+      <point x="188.75" y="1874.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.DrawableResponsiveSection" target="ui.drawing.DrawableSection">
+      <point x="-82.66666666666697" y="-26.0" />
+      <point x="7081.484060049723" y="254.0" />
+      <point x="5360.680684643338" y="254.0" />
+      <point x="73.5" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.OnlinePlayerConfig.PortBox" target="ui.game.menu.playerConfigs.OnlinePlayerConfig">
+      <point x="-26.0" y="-26.0" />
+      <point x="1574.2973513100042" y="1264.0" />
+      <point x="859.1840600497226" y="1264.0" />
+      <point x="64.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.ClientPlayerConfig" target="ui.game.menu.playerConfigs.OnlinePlayerConfig">
+      <point x="48.0" y="-26.0" />
+      <point x="627.2973513100042" y="1344.0" />
+      <point x="731.1840600497226" y="1344.0" />
+      <point x="-64.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.CentredSection" target="ui.drawing.layout.DrawableResponsiveSection">
+      <point x="0.0" y="-26.0" />
+      <point x="31.0" y="26.0" />
+    </edge>
+    <edge source="logic.Game.Coord" target="logic.Game">
+      <point x="0.0" y="-26.0" />
+      <point x="76.75" y="1670.0" />
+      <point x="112.75000000000001" y="1670.0" />
+      <point x="-20.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog.Dialog" target="ui.game.MinimumSize.MinimumSizeDialog">
+      <point x="24.0" y="-26.0" />
+      <point x="5310.077576974568" y="1344.0" />
+      <point x="7342.15072671639" y="1344.0" />
+      <point x="-46.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableResponsiveSection" target="ui.drawing.layout.ResponsiveSection">
+      <point x="66.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.PlaceMove" target="logic.player.ai.AIPlayer">
+      <point x="30.0" y="-26.0" />
+      <point x="230.0" y="930.0" />
+      <point x="206.93406004972258" y="930.0" />
+      <point x="206.93406004972258" y="778.0" />
+      <point x="243.93406004972258" y="778.0" />
+      <point x="14.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.OptionChooser" target="ui.input.selection.DrawableSelectableSection">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.piece.Rooster" target="logic.piece.Piece">
+      <point x="0.0" y="-26.0" />
+      <point x="1109.0" y="1665.0" />
+      <point x="875.6666666666666" y="1665.0" />
+      <point x="36.66666666666663" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseMenu" target="ui.game.Game">
+      <point x="30.0" y="-26.0" />
+      <point x="1199.7973513100042" y="1476.0" />
+      <point x="1692.2973513100042" y="1476.0" />
+      <point x="-20.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.Dialog" target="ui.input.selection.DrawableSelectableSection">
+      <point x="0.0" y="-26.0" />
+      <point x="1494.1333046471595" y="778.0" />
+      <point x="3138.3973513100045" y="778.0" />
+      <point x="-99.19999999999982" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.AIMoveProcessor" target="ui.BlockingThread">
+      <point x="42.0" y="-26.0" />
+      <point x="547.1340600497233" y="778.0" />
+      <point x="992.1333046471595" y="778.0" />
+      <point x="-60.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableBufferedSection" target="ui.input.selection.SelectableBufferedSection">
+      <point x="-88.0" y="-26.0" />
+      <point x="4150.516637980493" y="930.0" />
+      <point x="4171.234060049723" y="930.0" />
+      <point x="93.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseButton" target="ui.game.Game">
+      <point x="-34.0" y="-26.0" />
+      <point x="1915.1966245936146" y="1466.0" />
+      <point x="1718.9640179766707" y="1466.0" />
+      <point x="6.666666666666515" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.Player.ConfigButton" target="ui.menu.button.MenuButton">
+      <point x="-36.0" y="-26.0" />
+      <point x="8027.147590361446" y="1476.0" />
+      <point x="7654.6449703576245" y="1476.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.MenuButton" target="ui.menu.button.Button">
+      <point x="-42.66666666666697" y="-26.0" />
+      <point x="7611.978303690958" y="1264.0" />
+      <point x="2674.1840600497226" y="1264.0" />
+      <point x="36.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.ServerPlayer.Accepter" target="ui.BlockingThread">
+      <point x="28.0" y="-26.0" />
+      <point x="864.3840600497228" y="890.0" />
+      <point x="1216.3833046471595" y="890.0" />
+      <point x="1216.3833046471595" y="728.0" />
+      <point x="1072.1333046471595" y="728.0" />
+      <point x="20.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseButton" target="ui.menu.button.ChangeViewButton">
+      <point x="34.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableResponsiveBorderedSection" target="ui.input.selection.layout.SelectableResponsiveSection">
+      <point x="-109.33333333333303" y="-26.0" />
+      <point x="8224.317393383057" y="688.0" />
+      <point x="7868.327576974569" y="688.0" />
+      <point x="49.5" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.Receiver" target="ui.BlockingThread">
+      <point x="28.0" y="-26.0" />
+      <point x="1177.8833046471595" y="738.0" />
+      <point x="1032.1333046471595" y="738.0" />
+      <point x="-20.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.GameFinishedDialog" target="ui.game.Game">
+      <point x="48.0" y="-26.0" />
+      <point x="1041.7973513100042" y="1466.0" />
+      <point x="1678.9640179766707" y="1466.0" />
+      <point x="-33.333333333333485" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIGame.Move" target="logic.player.ai.AIGame">
+      <point x="0.0" y="-26.0" />
+      <point x="81.25" y="1777.0" />
+      <point x="169.55" y="1777.0" />
+      <point x="-19.19999999999999" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog" target="ui.game.MinimumSize">
+      <point x="-46.0" y="-26.0" />
+      <point x="7342.15072671639" y="1162.0" />
+      <point x="6924.90072671639" y="1162.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.ServerPlayer.Accepter" target="logic.player.SocketPlayer.ServerPlayer">
+      <point x="-28.0" y="-26.0" />
+      <point x="808.3840600497228" y="880.0" />
+      <point x="877.6340600497228" y="880.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.MinimumSize.MinimumSizeDialog" target="ui.input.selection.layout.SelectableMinimumSizeSection">
+      <point x="46.0" y="-26.0" />
+      <point x="7434.15072671639" y="1152.0" />
+      <point x="7003.40072671639" y="1152.0" />
+      <point x="7003.40072671639" y="920.0" />
+      <point x="7015.15072671639" y="920.0" />
+      <point x="68.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.PauseMenu" target="ui.menu.Dialog">
+      <point x="-30.0" y="-26.0" />
+      <point x="1139.7973513100042" y="910.0" />
+      <point x="1474.9333046471597" y="910.0" />
+      <point x="-19.199999999999818" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.ServerPlayer.Rejecter" target="logic.player.SocketPlayer.ServerPlayer">
+      <point x="0.0" y="-26.0" />
+      <point x="653.1340600497233" y="870.0" />
+      <point x="829.6340600497228" y="870.0" />
+      <point x="-48.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.DrawableResponsiveSection" target="ui.input.ResizeHandler">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.composition.BufferedSectionGrid" target="ui.drawing.BufferedSection">
+      <point x="-50.0" y="-26.0" />
+      <point x="6349.65072671639" y="728.0" />
+      <point x="4787.067393383056" y="728.0" />
+      <point x="74.66666666666606" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableCentredSection" target="ui.input.selection.layout.SelectableResponsiveSection">
+      <point x="80.0" y="-26.0" />
+      <point x="7795.247379996179" y="1122.0" />
+      <point x="7710.478303690958" y="1122.0" />
+      <point x="7710.478303690958" y="778.0" />
+      <point x="7802.327576974569" y="778.0" />
+      <point x="-16.5" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableResponsiveSection" target="ui.input.selection.SelectableSection">
+      <point x="-66.0" y="-26.0" />
+      <point x="7752.827576974569" y="436.0" />
+      <point x="5107.567393383056" y="436.0" />
+      <point x="84.33333333333303" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.BoardMove" target="logic.player.ai.AIPlayer">
+      <point x="-30.0" y="-26.0" />
+      <point x="30.0" y="930.0" />
+      <point x="36.434060049722575" y="930.0" />
+      <point x="36.434060049722575" y="758.0" />
+      <point x="187.93406004972258" y="758.0" />
+      <point x="-42.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.GameBoard" target="ui.input.selection.SelectableGrid">
+      <point x="0.0" y="-26.0" />
+      <point x="3515.9840600497228" y="930.0" />
+      <point x="3585.5973513100043" y="930.0" />
+      <point x="-20.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.TextBox.KeyHandler" target="ui.menu.TextBox">
+      <point x="-32.0" y="-26.0" />
+      <point x="4350.279957926949" y="1324.0" />
+      <point x="3529.833333333333" y="1324.0" />
+      <point x="26.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game" target="ui.input.EscapeHandler">
+      <point x="26.666666666666515" y="-26.0" />
+      <point x="1738.9640179766707" y="1284.0" />
+      <point x="2418.6973513100043" y="1284.0" />
+      <point x="-30.40000000000009" y="26.0" />
+    </edge>
+    <edge source="ui.menu.TextBox" target="ui.input.selection.DrawableSelectableBufferedSection">
+      <point x="0.0" y="-26.0" />
+      <point x="3503.833333333333" y="1132.0" />
+      <point x="3956.9840600497228" y="1132.0" />
+      <point x="104.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.CentredSection" target="ui.drawing.colour.ColouredElement">
+      <point x="-53.33333333333394" y="-26.0" />
+      <point x="7141.817393383056" y="910.0" />
+      <point x="6204.35072671639" y="910.0" />
+      <point x="67.20000000000073" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableSection" target="ui.drawing.Section">
+      <point x="46.0" y="-26.0" />
+      <point x="5069.234060049723" y="234.0" />
+      <point x="4939.764017976671" y="234.0" />
+      <point x="4939.764017976671" y="112.0" />
+      <point x="6826.899005545998" y="112.0" />
+      <point x="-33.42857142857065" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.MinimumSizeSection" target="ui.drawing.layout.ResponsiveSection">
+      <point x="48.0" y="-26.0" />
+      <point x="6664.65072671639" y="566.0" />
+      <point x="7401.5" y="566.0" />
+      <point x="7401.5" y="324.0" />
+      <point x="7858.541862688855" y="324.0" />
+      <point x="-26.285714285713766" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.ChangeViewButton" target="ui.drawing.PrintHandler">
+      <point x="-66.0" y="-26.0" />
+      <point x="1917.1966245936146" y="1264.0" />
+      <point x="1824.6840600497226" y="1264.0" />
+      <point x="1824.6840600497226" y="1032.0" />
+      <point x="2755.5973513100043" y="1032.0" />
+      <point x="2755.5973513100043" y="142.0" />
+      <point x="4146.029957926949" y="142.0" />
+      <point x="-36.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.Filler" target="ui.drawing.colour.ColouredElement">
+      <point x="-32.0" y="-26.0" />
+      <point x="6199.65072671639" y="930.0" />
+      <point x="6170.75072671639" y="930.0" />
+      <point x="33.600000000000364" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.ExitButton" target="ui.menu.button.ExitButton">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer" target="logic.player.Player">
+      <point x="0.0" y="-26.0" />
+      <point x="229.93406004972258" y="566.0" />
+      <point x="480.6833046471602" y="566.0" />
+      <point x="-19.200000000000045" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.ChangeViewButton" target="ui.input.selection.SelectableSection">
+      <point x="22.0" y="-26.0" />
+      <point x="2005.1966245936146" y="1254.0" />
+      <point x="1963.3507267163895" y="1254.0" />
+      <point x="1963.3507267163895" y="1052.0" />
+      <point x="2777.5973513100043" y="1052.0" />
+      <point x="2777.5973513100043" y="506.0" />
+      <point x="4938.90072671639" y="506.0" />
+      <point x="-84.33333333333303" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.layout.SelectableMinimumSizeSection" target="ui.drawing.layout.MinimumSizeSection">
+      <point x="-90.66666666666697" y="-26.0" />
+      <point x="6856.484060049723" y="708.0" />
+      <point x="6616.65072671639" y="708.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.game.menu.playerConfigs.ClientPlayerConfig" target="ui.game.menu.playerConfigs.PlayerConfig">
+      <point x="-48.0" y="-26.0" />
+      <point x="531.2973513100042" y="1344.0" />
+      <point x="494.1840600497226" y="1344.0" />
+      <point x="18.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableSection.Handler" target="ui.input.KeyHandler">
+      <point x="26.0" y="-26.0" />
+      <point x="5666.734060049723" y="1162.0" />
+      <point x="5803.984060049723" y="1162.0" />
+      <point x="-42.666666666666515" y="26.0" />
+    </edge>
+    <edge source="logic.piece.Piece.Move" target="logic.piece.Piece">
+      <point x="0.0" y="-26.0" />
+      <point x="897.0" y="1685.0" />
+      <point x="846.3333333333334" y="1685.0" />
+      <point x="7.333333333333371" y="26.0" />
+    </edge>
+    <edge source="ui.game.Game.GameFinishedDialog" target="ui.menu.Dialog">
+      <point x="-48.0" y="-26.0" />
+      <point x="945.7973513100042" y="900.0" />
+      <point x="1455.7333046471595" y="900.0" />
+      <point x="-38.40000000000009" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.Receiver" target="logic.player.SocketPlayer">
+      <point x="-28.0" y="-26.0" />
+      <point x="1121.8833046471595" y="748.0" />
+      <point x="866.2833046471592" y="748.0" />
+      <point x="57.59999999999991" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.DrawableSection" target="ui.drawing.Section">
+      <point x="42.0" y="-26.0" />
+      <point x="5329.180684643338" y="122.0" />
+      <point x="6834.327576974569" y="122.0" />
+      <point x="-26.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.ai.AIPlayer.AIMoveProcessor.AIMoveThread" target="logic.player.ai.AIPlayer.AIMoveProcessor">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.piece.Chick" target="logic.piece.Piece">
+      <point x="0.0" y="-26.0" />
+      <point x="661.0" y="1675.0" />
+      <point x="817.0" y="1675.0" />
+      <point x="-22.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.BorderSection.Border" target="ui.drawing.layout.BorderSection">
+      <point x="0.0" y="-26.0" />
+      <point x="5258.734060049723" y="496.0" />
+      <point x="5684.0" y="496.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.drawing.layout.ResponsiveSection" target="ui.drawing.Section">
+      <point x="0.0" y="-26.0" />
+      <point x="7884.827576974569" y="102.0" />
+      <point x="6886.327576974569" y="102.0" />
+      <point x="26.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.SelectableBufferedGrid" target="ui.drawing.composition.BufferedSectionComposer">
+      <point x="84.0" y="-26.0" />
+      <point x="3772.833333333333" y="1162.0" />
+      <point x="4506.516637980493" y="1162.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.DrawableSelectableSection" target="ui.drawing.DrawableSection">
+      <point x="-62.0" y="-26.0" />
+      <point x="3175.5973513100043" y="254.0" />
+      <point x="5213.680684643338" y="254.0" />
+      <point x="-73.5" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.DrawableSelectableSection" target="ui.input.selection.SelectableSection">
+      <point x="62.0" y="-26.0" />
+      <point x="3299.5973513100043" y="516.0" />
+      <point x="4954.234060049723" y="516.0" />
+      <point x="-69.0" y="26.0" />
+    </edge>
+    <edge source="ui.input.selection.UnselectableBufferedSection" target="ui.drawing.BufferedSection">
+      <point x="0.0" y="-26.0" />
+      <point x="4238.516637980493" y="930.0" />
+      <point x="4232.234060049723" y="930.0" />
+      <point x="4232.234060049723" y="738.0" />
+      <point x="4675.067393383056" y="738.0" />
+      <point x="-37.33333333333394" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.ServerPlayer.ConnectingMessage" target="ui.menu.Dialog">
+      <point x="46.0" y="-26.0" />
+      <point x="1288.2973513100042" y="920.0" />
+      <point x="1494.1333046471595" y="920.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.TextBox.KeyHandler.MovementKeyHandler" target="ui.input.MovementKeyHandler">
+      <point x="48.0" y="-26.0" />
+      <point x="5915.984060049723" y="1476.0" />
+      <point x="6809.244243641235" y="1476.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="logic.player.SocketPlayer.ServerPlayer.ConnectingMessage" target="logic.player.SocketPlayer.ServerPlayer">
+      <point x="-46.0" y="-26.0" />
+      <point x="1196.2973513100042" y="880.0" />
+      <point x="925.6340600497228" y="880.0" />
+      <point x="48.0" y="26.0" />
+    </edge>
+    <edge source="ui.menu.button.MenuButton" target="ui.input.selection.layout.SelectableCentredSection">
+      <point x="0.0" y="-26.0" />
+      <point x="7654.6449703576245" y="1324.0" />
+      <point x="7715.247379996179" y="1324.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4" x="909.0" y="656.5" />
+  <SelectedNodes>
+    <node>logic.piece.Giraffe</node>
+    <node>logic.player.SocketPlayer.ServerPlayer</node>
+    <node>logic.player.SocketPlayer.ServerPlayer.Accepter</node>
+    <node>ui.drawing.layout.ResponsiveSection</node>
+    <node>ui.menu.OptionChooser</node>
+    <node>ui.input.selection.UnselectableSection.Handler</node>
+    <node>ui.game.menu.GameStartButton</node>
+    <node>ui.drawing.DrawableSection</node>
+    <node>logic.player.ai.AIPlayer.Move</node>
+    <node>ui.menu.TextBox.KeyHandler.EscapeHandler</node>
+    <node>ui.drawing.composition.BufferedSectionComposer</node>
+    <node>logic.player.ai.AIPlayer.BoardMove</node>
+    <node>logic.player.ai.AIPlayer.AIMoveProcessor</node>
+    <node>ui.game.menu.GameMenu.EscapeHandler</node>
+    <node>ui.drawing.layout.BorderSection</node>
+    <node>ui.menu.button.ExitButton</node>
+    <node>ui.menu.button.MenuButton</node>
+    <node>ui.game.Hand</node>
+    <node>logic.player.SocketPlayer.ServerPlayer.ConnectingMessage</node>
+    <node>logic.player.SocketPlayer.ServerPlayer.Rejecter</node>
+    <node>ui.menu.LabeledMenuItem</node>
+    <node>ui.input.selection.layout.SelectableResponsiveSection</node>
+    <node>ui.game.Hand.BorderedPiece</node>
+    <node>logic.piece.Rooster</node>
+    <node>ui.input.selection.DrawableSelectableSection</node>
+    <node>ui.drawing.composition.OrderedCoordinate</node>
+    <node>ui.menu.TextBox.KeyHandler.MovementKeyHandler</node>
+    <node>logic.GameHandler</node>
+    <node>ui.input.selection.layout.SelectableBorderedSection</node>
+    <node>ui.game.menu.playerConfigs.ClientPlayerConfig</node>
+    <node>ui.game.menu.GameMenu</node>
+    <node>ui.drawing.PrintHandler</node>
+    <node>logic.piece.Lion</node>
+    <node>ui.game.menu.ExitButton</node>
+    <node>ui.game.menu.Player</node>
+    <node>ui.drawing.layout.Filler</node>
+    <node>ui.menu.TextBox.KeyHandler</node>
+    <node>ui.input.selection.UnselectableBufferedSection</node>
+    <node>logic.player.Player.CopyOfPlayer</node>
+    <node>ui.drawing.colour.ColouredElement</node>
+    <node>logic.player.SocketPlayer.Receiver</node>
+    <node>ui.drawing.layout.DrawableResponsiveSection</node>
+    <node>logic.player.ai.AIGame.Position</node>
+    <node>ui.menu.MenuString</node>
+    <node>ui.menu.MenuItem</node>
+    <node>logic.player.ai.AIGame</node>
+    <node>logic.player.HumanPlayer</node>
+    <node>logic.player.SocketPlayer</node>
+    <node>ui.drawing.composition.OrderedSectionComposer</node>
+    <node>ui.game.Game.GameFinishedDialog</node>
+    <node>logic.Game.Coord</node>
+    <node>ui.drawing.composition.BufferedSectionGrid</node>
+    <node>logic.piece.Piece.Move</node>
+    <node>ui.menu.TextBox</node>
+    <node>ui.game.MinimumSize.MinimumSizeDialog</node>
+    <node>ui.game.Game.PauseButton</node>
+    <node>ui.TerminalHandler</node>
+    <node>ui.game.menu.playerConfigs.OnlinePlayerConfig</node>
+    <node>ui.BlockingThread</node>
+    <node>ui.input.TextInputKeyHandler</node>
+    <node>logic.piece.Chick</node>
+    <node>ui.game.Game.PauseMenuEscapeHandler</node>
+    <node>ui.game.Piece</node>
+    <node>ui.menu.Dialog</node>
+    <node>ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage</node>
+    <node>ui.drawing.composition.Coordinate</node>
+    <node>ui.drawing.DrawableBufferedSection</node>
+    <node>ConsoleTest</node>
+    <node>ui.input.selection.layout.SelectableCentredSection</node>
+    <node>ui.input.KeyHandler</node>
+    <node>logic.player.ai.AIPlayer.AIMoveProcessor.AIMoveThread</node>
+    <node>ui.drawing.composition.SectionComposer</node>
+    <node>ui.input.selection.UnselectableSection</node>
+    <node>ui.game.menu.playerConfigs.PlayerConfig.NamedPlayerConfig</node>
+    <node>ui.input.selection.UnselectableResponsiveSection</node>
+    <node>ui.input.EscapeHandler</node>
+    <node>logic.player.ai.AIGame.Move</node>
+    <node>logic.player.ai.AIPlayer</node>
+    <node>ui.drawing.BufferedSection</node>
+    <node>ui.game.Game</node>
+    <node>ui.input.selection.layout.SelectableMinimumSizeSection</node>
+    <node>ui.game.MinimumSize.MinimumSizeDialog.Dialog</node>
+    <node>ui.game.menu.Player.ConfigButton</node>
+    <node>ui.drawing.composition.SectionGrid</node>
+    <node>ui.game.GameBoard.PromotionIndicator</node>
+    <node>ui.drawing.layout.CentredSection</node>
+    <node>ui.drawing.colour.ColouredString</node>
+    <node>ui.input.selection.SelectableGrid</node>
+    <node>ui.game.Game.PauseMenu</node>
+    <node>logic.piece.Elephant</node>
+    <node>ui.game.MinimumSize</node>
+    <node>ui.menu.button.ChangeViewButton</node>
+    <node>ui.input.ExitEscapeHandler</node>
+    <node>ui.drawing.layout.MinimumSizeSection</node>
+    <node>ui.drawing.composition.BasicSectionComposer</node>
+    <node>ui.drawing.colour.ColouredChar</node>
+    <node>ui.menu.Menu</node>
+    <node>ui.input.selection.DrawableSelectableBufferedSection</node>
+    <node>logic.player.SocketPlayer.ClientPlayer</node>
+    <node>logic.player.ai.AIGame.BoardPosition</node>
+    <node>ui.game.GameBoard</node>
+    <node>ui.game.Game.PauseMenuResumeButton</node>
+    <node>ui.input.selection.SelectableBufferedGrid</node>
+    <node>ui.game.menu.playerConfigs.OnlinePlayerConfig.PortBox</node>
+    <node>logic.piece.Piece</node>
+    <node>ui.drawing.composition.BasicSectionGrid</node>
+    <node>ui.drawing.composition.NoOverlapSectionComposer</node>
+    <node>ui.input.selection.SelectableSection</node>
+    <node>ui.Reader</node>
+    <node>ui.input.MovementKeyHandler</node>
+    <node>ui.game.Game.ExitToMenuButton</node>
+    <node>ui.drawing.Section</node>
+    <node>logic.player.ai.AIGame.TakeMove</node>
+    <node>ui.input.selection.layout.SelectableResponsiveBorderedSection</node>
+    <node>ui.game.menu.playerConfigs.HumanPlayerConfig</node>
+    <node>ui.drawing.layout.ResponsiveBorderSection</node>
+    <node>ui.drawing.colour.WrappingColouredString</node>
+    <node>ui.game.menu.playerConfigs.AIPlayerConfig</node>
+    <node>ui.game.menu.playerConfigs.ServerPlayerConfig</node>
+    <node>logic.Game</node>
+    <node>ui.AnimalChess</node>
+    <node>ui.input.selection.SelectableBufferedSection</node>
+    <node>ui.drawing.colour.ColouredStringBuilder</node>
+    <node>logic.player.ai.AIPlayer.PlaceMove</node>
+    <node>ui.drawing.layout.BorderSection.Border</node>
+    <node>ui.drawing.colour.Colour</node>
+    <node>logic.player.Player</node>
+    <node>ui.input.selection.SelectionHandler</node>
+    <node>ui.menu.button.Button</node>
+    <node>ui.drawing.colour.BackgroundColour</node>
+    <node>ui.game.MinimumSize.MinimumSizeDialog.TooSmallMessage.Handler</node>
+    <node>ui.input.selection.MovementSelectionHandler</node>
+    <node>ui.input.ResizeHandler</node>
+    <node>logic.player.ai.AIGame.HandPosition</node>
+    <node>ui.game.menu.playerConfigs.PlayerConfig</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>Project Files</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
