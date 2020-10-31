@@ -2,6 +2,10 @@ public class HelloWorld
 {
     public static void main(String[] args)
     {
-        System.out.println("Hello World!");
+        BufferedImage img = null;
+        try {
+            img = ImageIO.read(new File("pic.jpg"));
+        } catch (IOException e) {
+        }
     }
 }
