@@ -29,14 +29,13 @@ public class AsciiConverter
         var framerate = info.getTotalFrames() / info.getTotalDuration();
         var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate * 10), info.getTotalFrames()));
         var size = info.getVideoCodecMeta().getSize();
-        info.getVideoCodecMeta().getPixelAspectRatio();
         
         System.out.println(size.getWidth() + "x" + size.getHeight() + ", " + info.getTotalFrames() + " frames @ " + framerate + "fps");
         var timeBetweenFrames = (info.getTotalDuration() / info.getTotalFrames()) * 1000;
         var skipDelta = 2 * timeBetweenFrames;
         
         var aspectRatio = 2;
-        var width = args.length < 2 ? 50 : Integer.parseInt(args[1]);
+        var width = args.length < 2 ? 75 : Integer.parseInt(args[1]);
         var regionWidth = Math.max(size.getWidth() / width, 1);
         var regionHeight = regionWidth * aspectRatio;
         
@@ -65,6 +64,7 @@ public class AsciiConverter
                 lastFrameTime = System.currentTimeMillis();
     
            GetSetPixels.toAscii(frame, regionWidth, regionHeight, window.getGrid());
+           //Thread.sleep(10);
         }
         System.out.println("Dropped " + skipped + " frames.");
     }

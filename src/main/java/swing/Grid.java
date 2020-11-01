@@ -16,6 +16,7 @@ public class Grid extends JPanel
     public Grid(int sizeX, int sizeY)
     {
         super(new GridBagLayout());
+        //setBackground(Color.BLACK);
 
         grid = new Char[sizeX][sizeY];
 
@@ -25,7 +26,7 @@ public class Grid extends JPanel
             {
                 grid[x][y] = new Char(" ", Color.BLACK, x, y);
                 var square = grid[x][y];
-                add(square, new Constraints(x, y));
+                add(square, new Constraints(x, y, 1, 1, 0));
             }
         }
     }

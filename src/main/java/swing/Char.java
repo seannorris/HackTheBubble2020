@@ -8,7 +8,7 @@ import java.awt.Font;
 public class Char extends JLabel
 {
     private static final int SIZE = 15;
-    private static final Font FONT = new Font(Font.MONOSPACED, Font.PLAIN, 12);
+    private static final Font FONT = new Font(Font.MONOSPACED, Font.PLAIN, 15);
     
     private int x;
     private int y;
@@ -36,7 +36,9 @@ public class Char extends JLabel
     
     public void updateText(String text, Color colour)
     {
-        setText(text);
-        setForeground(colour);
+        if(!text.equals(this.getText()))
+            setText(text);
+        if(!colour.equals(this.getForeground()))
+            setForeground(colour);
     }
 }
