@@ -10,6 +10,13 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class AsciiConverter
 {
@@ -27,7 +34,6 @@ public class AsciiConverter
         var track = demuxer.getVideoTrack();
         var info = track.getMeta();
         var framerate = info.getTotalFrames() / info.getTotalDuration();
-        var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate * 10), info.getTotalFrames()));
         var size = info.getVideoCodecMeta().getSize();
         
         System.out.println(size.getWidth() + "x" + size.getHeight() + ", " + info.getTotalFrames() + " frames @ " + framerate + "fps");
@@ -39,13 +45,13 @@ public class AsciiConverter
         var regionWidth = Math.max(size.getWidth() / width, 1);
         var regionHeight = regionWidth * aspectRatio;
         
-        var window = new MainWindow(size.getWidth() / regionWidth, size.getHeight() / regionHeight);
-        
+        var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate * 3), info.getTotalFrames()), regionWidth, regionHeight);
         buffer.fill();
+        System.out.print("\u001b[2J");
         
         var skipped = 0;
         double lastFrameTime = -1;
-        BufferedImage frame;
+        String frame;
         while((frame = buffer.nextFrame()) != null)
         {
             if(lastFrameTime != -1)
@@ -62,33 +68,57 @@ public class AsciiConverter
             }
             else
                 lastFrameTime = System.currentTimeMillis();
-    
-           GetSetPixels.toAscii(frame, regionWidth, regionHeight, window.getGrid());
+            
+            System.out.print(frame);
            //Thread.sleep(10);
         }
         System.out.println("Dropped " + skipped + " frames.");
     }
     
+    private static class Decoder implements Callable<String>
+    {
+        private final Picture picture;
+        private final int regionWidth;
+        private final int regionHeight;
+        
+        public Decoder(Picture picture, int regionWidth, int regionHeight)
+        {
+            this.picture = picture;
+            this.regionWidth = regionWidth;
+            this.regionHeight = regionHeight;
+        }
+        
+        @Override
+        public String call()
+        {
+            return GetSetPixels.toAscii(AWTUtil.toBufferedImage(picture), regionWidth, regionHeight);
+        }
+    }
+    
     private static class Buffer implements Runnable
     {
         private final FrameGrab frameGrab;
-        private final BufferedImage[] buffer;
+        private final String[] buffer;
         private final Thread thread;
         
+        private final int regionWidth;
+        private final int regionHeight;
+        
         private final Object sync1 = new Object();
-        private final Object sync2 = new Object();
         
         private int head = 0;
         private int tail = 0;
         private Integer size = 0;
         
-        public Buffer(File video, int bufferSize) throws IOException, JCodecException
+        public Buffer(File video, int bufferSize, int regionWidth, int regionHeight) throws IOException, JCodecException
         {
             var channel = NIOUtils.readableChannel(video);
             frameGrab = FrameGrab.createFrameGrab(channel);
-            buffer = new BufferedImage[bufferSize];
+            buffer = new String[bufferSize];
             thread = new Thread(this);
             thread.start();
+            this.regionWidth = regionWidth;
+            this.regionHeight = regionHeight;
         }
     
         public Thread getThread()
@@ -99,18 +129,28 @@ public class AsciiConverter
         @Override
         public void run()
         {
+            var decoder = Executors.newFixedThreadPool(32);
+            var decodeQueue = new ConcurrentLinkedQueue<Future<String>>();
             try
             {
                 Picture frame;
                 while((frame = frameGrab.getNativeFrame()) != null)
-                    addToArray(AWTUtil.toBufferedImage(frame));
-                
+                {
+                    decodeQueue.add(decoder.submit(new Decoder(frame, regionWidth, regionHeight)));
+                    while(!decodeQueue.isEmpty() && decodeQueue.peek().isDone())
+                        addToArray(decodeQueue.remove().get());
+                }
+                while(!decodeQueue.isEmpty())
+                {
+                    addToArray(decodeQueue.remove().get());
+                }
                 addToArray(null);
             }
-            catch(IOException | InterruptedException e)
+            catch(IOException | InterruptedException | ExecutionException e)
             {
                 throw new RuntimeException(e);
             }
+            decoder.shutdownNow();
         }
         
         public final Object fullSync = new Object();
@@ -123,7 +163,7 @@ public class AsciiConverter
             }
         }
         
-        private void addToArray(BufferedImage image) throws InterruptedException
+        private void addToArray(String input) throws InterruptedException
         {
             synchronized(sync1)
             {
@@ -133,27 +173,19 @@ public class AsciiConverter
                     {
                         fullSync.notify();
                     }
-                    System.gc();
                     sync1.wait();
                 }
             }
             
-            buffer[head] = image;
+            buffer[head] = input;
             head = (head + 1) % buffer.length;
             size++;
-            synchronized(sync2)
-            {
-                sync2.notify();
-            }
         }
         
-        public BufferedImage nextFrame() throws InterruptedException
+        public String nextFrame() throws InterruptedException
         {
-            synchronized(sync2)
-            {
-                while(size <= 0)
-                    sync2.wait();
-            }
+            if(size <= 0)
+                fill();
             
             var out = buffer[tail];
             buffer[tail] = null;
