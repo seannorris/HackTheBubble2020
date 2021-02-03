@@ -17,21 +17,28 @@ public class GetSetPixels
         int width = img.getWidth() / regionWidth;
         int height = img.getHeight() / regionHeight;
         
-        var downScaledImage = resize(img, width, height);
+        var downScaledImage = resize(img, width, height * 2);
         
         for(int i = 0; i < height; i++)
         {
             for(int j = 0; j < width; j++)
             {
                 
-                int color = downScaledImage.getRGB(j, i); // pixel operations
+                int color1 = downScaledImage.getRGB(j, i * 2); // pixel operations
                 
-                int red = (color >>> 16) & 0xFF;
-                int green = (color >>> 8) & 0xFF;
-                int blue = (color) & 0xFF;
+                int red1 = (color1 >>> 16) & 0xFF;
+                int green1 = (color1 >>> 8) & 0xFF;
+                int blue1 = (color1) & 0xFF;
+    
+                int color2 = downScaledImage.getRGB(j, i * 2 + 1); // pixel operations
+    
+                int red2 = (color2 >>> 16) & 0xFF;
+                int green2 = (color2 >>> 8) & 0xFF;
+                int blue2 = (color2) & 0xFF;
                 
-                String colourCode = String.format("\u001b[48;2;%d;%d;%dm\u001b[38;2;0;0;0m", red, green, blue);
+                String colourCode = String.format("\u001b[48;2;%d;%d;%dm\u001b[38;2;%d;%d;%dm", red1, green1, blue1, red2, green2, blue2);
                 
+                /*
                 // calc luminance in range 0.0 to 1.0; using SRGB luminance constants
                 float luminance = (red * 0.2126f + green * 0.7152f + blue * 0.0722f) / 255;
                 
@@ -73,8 +80,10 @@ public class GetSetPixels
                     character = ('@');
                 }
                 
+                 */
+                
                 out.append(colourCode);
-                out.append(character);
+                out.append('▄');
             }
             out.append(System.lineSeparator());
         }
