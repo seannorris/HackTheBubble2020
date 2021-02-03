@@ -33,6 +33,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class AsciiConverter
 {
+    private static SourceDataLine line;
+    private static final Object soundSync = new Object();
+    private static boolean audioWait = true;
+    
     public static void main(String[] args) throws IOException, JCodecException, InterruptedException, LineUnavailableException
     {
         if(args.length < 1)
@@ -66,27 +70,25 @@ public class AsciiConverter
         var audioDecodedMeta = aacDecoder.getCodecMeta(prevAudioFrame[0].getData());
         var audioFormat = new AudioFormat(audioDecodedMeta.getSampleRate(), audioDecodedMeta.getSampleSize() * 8, audioDecodedMeta.getChannelCount(), true,  false);
         var audioInfo = new DataLine.Info(SourceDataLine.class, audioFormat);
-        var line = (SourceDataLine)AudioSystem.getLine(audioInfo);
+        line = (SourceDataLine)AudioSystem.getLine(audioInfo);
         line.open();
-    
-        var sync = new Object();
+        
     
         var byteBuffer = ByteBuffer.allocate(audioMeta.getBytesPerFrame());
         new Thread(() ->
         {
             try
             {
-                var wait = true;
                 do
                 {
                     var audioBuffer = aacDecoder.decodeFrame(prevAudioFrame[0].getData(), byteBuffer).getData().array();
                     line.write(audioBuffer, 0, audioBuffer.length);
-                    if(wait)
+                    if(audioWait)
                     {
-                        wait = false;
-                        synchronized(sync)
+                        audioWait = false;
+                        synchronized(soundSync)
                         {
-                            sync.wait();
+                            soundSync.wait();
                         }
                     }
                 }
@@ -115,9 +117,9 @@ public class AsciiConverter
         buffer.fill();
     
         line.start();
-        synchronized(sync)
+        synchronized(soundSync)
         {
-            sync.notify();
+            soundSync.notify();
         }
         
         System.out.print("\u001b[2J");
@@ -173,7 +175,7 @@ public class AsciiConverter
     private static class Buffer implements Runnable
     {
         private final FrameGrab frameGrab;
-        private final String[] buffer;
+        private String[] buffer;
         private final Thread thread;
         
         private final int regionWidth;
@@ -257,10 +259,31 @@ public class AsciiConverter
             size++;
         }
         
+        private boolean buffering = false;
         public String nextFrame()
         {
-            if(size <= 0)
-                return "\u001b[Hbuffering...";//fill();
+            if(buffering || size <= 0)
+            {
+                if(!buffering)
+                {
+                    buffering = true;
+                    line.stop();
+                    audioWait = true;
+                    var oldBuffer = buffer;
+                    buffer = new String[buffer.length * 2];
+                    for(int x = 0, size = this.size; x < size && buffer[x] == null; x++)
+                        buffer[x] = oldBuffer[x];
+                }
+                if(size < buffer.length)
+                    return "\u001b[Hbuffering...";//fill();
+                
+                buffering = false;
+                line.start();
+                synchronized(soundSync)
+                {
+                    soundSync.notify();
+                }
+            }
             
             var out = buffer[tail];
             buffer[tail] = null;
