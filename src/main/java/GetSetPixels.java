@@ -9,6 +9,8 @@ import java.awt.image.BufferedImage;
 
 public class GetSetPixels
 {
+    private static final int[] pixel = new int[3];
+    
     public static String toAscii(BufferedImage img, int regionWidth, int regionHeight)
     {
         var out = new StringBuilder();
@@ -18,23 +20,26 @@ public class GetSetPixels
         int height = img.getHeight() / regionHeight;
         
         var downScaledImage = resize(img, width, height * 2);
-        
+        var raster = downScaledImage.getRaster();
+    
         for(int i = 0; i < height; i++)
         {
             for(int j = 0; j < width; j++)
             {
-                
-                int color1 = downScaledImage.getRGB(j, i * 2); // pixel operations
-                
-                int red1 = (color1 >>> 16) & 0xFF;
-                int green1 = (color1 >>> 8) & 0xFF;
-                int blue1 = (color1) & 0xFF;
+                //var temp = System.nanoTime();
+                raster.getPixel(j, i * 2, pixel);
+                //int color1 = downScaledImage.getRGB(j, i * 2); // pixel operations
+                //System.out.print("\u001b[0K" + (System.nanoTime() - temp) + ", ");
+        
+                int red1 = pixel[0]; //(color1 >>> 16) & 0xFF;
+                int green1 = pixel[1]; //(color1 >>> 8) & 0xFF;
+                int blue1 = pixel[2]; //(color1) & 0xFF;
     
-                int color2 = downScaledImage.getRGB(j, i * 2 + 1); // pixel operations
+                raster.getPixel(j, i * 2 + 1, pixel); // pixel operations
     
-                int red2 = (color2 >>> 16) & 0xFF;
-                int green2 = (color2 >>> 8) & 0xFF;
-                int blue2 = (color2) & 0xFF;
+                int red2 = pixel[0];
+                int green2 = pixel[1];
+                int blue2 = pixel[2];
                 
                 String colourCode = String.format("\u001b[48;2;%d;%d;%dm\u001b[38;2;%d;%d;%dm", red1, green1, blue1, red2, green2, blue2);
                 
@@ -96,6 +101,7 @@ public class GetSetPixels
         BufferedImage resized = new BufferedImage(newWidth, newHeight, original.getType());
         Graphics2D g = resized.createGraphics();
         g.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g.drawImage(original, 0, 0, newWidth, newHeight, 0, 0, original.getWidth(),
                 original.getHeight(), null);
         g.dispose();

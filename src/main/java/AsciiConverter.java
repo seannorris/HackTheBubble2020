@@ -1,14 +1,27 @@
 import org.jcodec.api.FrameGrab;
 import org.jcodec.api.JCodecException;
+import org.jcodec.codecs.aac.AACDecoder;
 import org.jcodec.common.io.NIOUtils;
+import org.jcodec.common.model.Packet;
 import org.jcodec.common.model.Picture;
 import org.jcodec.containers.mp4.demuxer.MP4Demuxer;
 import org.jcodec.scale.AWTUtil;
 import swing.MainWindow;
 
+import javax.annotation.processing.ProcessingEnvironment;
+import javax.annotation.processing.Processor;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.nio.file.Paths;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -20,7 +33,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class AsciiConverter
 {
-    public static void main(String[] args) throws IOException, JCodecException, InterruptedException
+    public static void main(String[] args) throws IOException, JCodecException, InterruptedException, LineUnavailableException
     {
         if(args.length < 1)
         {
@@ -29,6 +42,15 @@ public class AsciiConverter
         }
         var video = Paths.get(args[0]).toFile();
         
+        /*
+        var audioInputStream = AudioSystem.(video);
+        var clip = AudioSystem.getClip();
+        clip.open(audioInputStream);
+        clip.start();
+        
+         */
+        
+        
         var channel = NIOUtils.readableChannel(video);
         var demuxer = MP4Demuxer.createMP4Demuxer(channel);
         var track = demuxer.getVideoTrack();
@@ -36,7 +58,51 @@ public class AsciiConverter
         var framerate = info.getTotalFrames() / info.getTotalDuration();
         var size = info.getVideoCodecMeta().getSize();
         
-        System.out.println(size.getWidth() + "x" + size.getHeight() + ", " + info.getTotalFrames() + " frames @ " + framerate + "fps");
+        var audioTrack = demuxer.getAudioTracks().get(0);
+        var audioMeta = audioTrack.getMeta().getAudioCodecMeta();
+    
+        final Packet[] prevAudioFrame = {audioTrack.nextFrame()};
+        var aacDecoder = new AACDecoder(prevAudioFrame[0].getData());
+        var audioDecodedMeta = aacDecoder.getCodecMeta(prevAudioFrame[0].getData());
+        var audioFormat = new AudioFormat(audioDecodedMeta.getSampleRate(), audioDecodedMeta.getSampleSize() * 8, audioDecodedMeta.getChannelCount(), true,  false);
+        var audioInfo = new DataLine.Info(SourceDataLine.class, audioFormat);
+        var line = (SourceDataLine)AudioSystem.getLine(audioInfo);
+        line.open();
+    
+        var sync = new Object();
+    
+        var byteBuffer = ByteBuffer.allocate(audioMeta.getBytesPerFrame());
+        new Thread(() ->
+        {
+            try
+            {
+                var wait = true;
+                do
+                {
+                    var audioBuffer = aacDecoder.decodeFrame(prevAudioFrame[0].getData(), byteBuffer).getData().array();
+                    line.write(audioBuffer, 0, audioBuffer.length);
+                    if(wait)
+                    {
+                        wait = false;
+                        synchronized(sync)
+                        {
+                            sync.wait();
+                        }
+                    }
+                }
+                while((prevAudioFrame[0] = audioTrack.nextFrame()) != null);
+                line.drain();
+                line.stop();
+                line.close();
+            }
+            catch(IOException | InterruptedException e)
+            {
+                throw new RuntimeException(e);
+            }
+        }).start();
+        
+        
+        System.out.printf("%dx%d, %d frames @ %sfps - Audio: %d bit @ %dhz%n", size.getWidth(), size.getHeight(), info.getTotalFrames(), framerate, audioMeta.getSampleSize() * 8, audioMeta.getSampleRate());
         var timeBetweenFrames = (info.getTotalDuration() / info.getTotalFrames()) * 1000;
         var skipDelta = 2 * timeBetweenFrames;
         
@@ -47,6 +113,13 @@ public class AsciiConverter
         
         var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate * 3), info.getTotalFrames()), regionWidth, regionHeight);
         buffer.fill();
+    
+        line.start();
+        synchronized(sync)
+        {
+            sync.notify();
+        }
+        
         System.out.print("\u001b[2J");
         
         var skipped = 0;
@@ -67,7 +140,9 @@ public class AsciiConverter
                 lastFrameTime += timeBetweenFrames;
             }
             else
+            {
                 lastFrameTime = System.currentTimeMillis();
+            }
             
             System.out.print(frame);
            //Thread.sleep(10);
@@ -129,7 +204,7 @@ public class AsciiConverter
         @Override
         public void run()
         {
-            var decoder = Executors.newFixedThreadPool(32);
+            var decoder = Executors.newCachedThreadPool();
             var decodeQueue = new ConcurrentLinkedQueue<Future<String>>();
             try
             {
@@ -182,10 +257,10 @@ public class AsciiConverter
             size++;
         }
         
-        public String nextFrame() throws InterruptedException
+        public String nextFrame()
         {
             if(size <= 0)
-                fill();
+                return "\u001b[Hbuffering...";//fill();
             
             var out = buffer[tail];
             buffer[tail] = null;
