@@ -2,40 +2,26 @@ import org.jcodec.api.FrameGrab;
 import org.jcodec.api.JCodecException;
 import org.jcodec.codecs.aac.AACDecoder;
 import org.jcodec.common.io.NIOUtils;
-import org.jcodec.common.logging.LogLevel;
-import org.jcodec.common.logging.LogSink;
-import org.jcodec.common.logging.Logger;
-import org.jcodec.common.logging.Message;
 import org.jcodec.common.model.Packet;
 import org.jcodec.common.model.Picture;
 import org.jcodec.containers.mp4.demuxer.MP4Demuxer;
 import org.jcodec.scale.AWTUtil;
-import swing.MainWindow;
 
-import javax.annotation.processing.ProcessingEnvironment;
-import javax.annotation.processing.Processor;
 import javax.sound.sampled.AudioFormat;
-import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
-import javax.sound.sampled.UnsupportedAudioFileException;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
 import java.nio.file.Paths;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class AsciiConverter
 {
@@ -83,11 +69,38 @@ public class AsciiConverter
         var byteBuffer = ByteBuffer.allocate(audioMeta.getBytesPerFrame());
         new Thread(() ->
         {
+            var decodedQueue = new ConcurrentLinkedQueue<ByteBuffer>();
+            var queueSync = new Object();
+            AtomicBoolean done = new AtomicBoolean(false);
+            new Thread(()->{
+                try
+                {
+                    do
+                    {
+                        decodedQueue.add(aacDecoder.decodeFrame(prevAudioFrame[0].getData(), byteBuffer).getData());
+                        synchronized(queueSync)
+                        {
+                            queueSync.notify();
+                        }
+                    }
+                    while((prevAudioFrame[0] = audioTrack.nextFrame()) != null);
+                    done.set(true);
+                }
+                catch(IOException e)
+                {
+                    throw new RuntimeException(e);
+                }
+            }).start();
             try
             {
+                if(decodedQueue.isEmpty())
+                    synchronized(queueSync)
+                    {
+                        queueSync.wait();
+                    }
                 do
                 {
-                    var audioBuffer = aacDecoder.decodeFrame(prevAudioFrame[0].getData(), byteBuffer).getData().array();
+                    var audioBuffer = decodedQueue.remove().array();
                     line.write(audioBuffer, 0, audioBuffer.length);
                     if(audioWait)
                     {
@@ -98,12 +111,12 @@ public class AsciiConverter
                         }
                     }
                 }
-                while((prevAudioFrame[0] = audioTrack.nextFrame()) != null);
+                while(!decodedQueue.isEmpty() || !done.get());
                 line.drain();
                 line.stop();
                 line.close();
             }
-            catch(IOException | InterruptedException e)
+            catch(InterruptedException e)
             {
                 throw new RuntimeException(e);
             }
@@ -160,6 +173,7 @@ public class AsciiConverter
     private static void startSound()
     {
         line.start();
+        audioWait = false;
         synchronized(soundSync)
         {
             soundSync.notify();
@@ -299,6 +313,7 @@ public class AsciiConverter
                 buffering = false;
                 startSound();
             }
+            
             
             var out = buffer[tail];
             buffer[tail] = null;
