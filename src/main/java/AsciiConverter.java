@@ -2,6 +2,10 @@ import org.jcodec.api.FrameGrab;
 import org.jcodec.api.JCodecException;
 import org.jcodec.codecs.aac.AACDecoder;
 import org.jcodec.common.io.NIOUtils;
+import org.jcodec.common.logging.LogLevel;
+import org.jcodec.common.logging.LogSink;
+import org.jcodec.common.logging.Logger;
+import org.jcodec.common.logging.Message;
 import org.jcodec.common.model.Packet;
 import org.jcodec.common.model.Picture;
 import org.jcodec.containers.mp4.demuxer.MP4Demuxer;
@@ -20,6 +24,8 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.file.Paths;
@@ -54,7 +60,6 @@ public class AsciiConverter
         clip.start();
         
          */
-        
         
         var channel = NIOUtils.readableChannel(video);
         var demuxer = MP4Demuxer.createMP4Demuxer(channel);
@@ -110,7 +115,7 @@ public class AsciiConverter
         var skipDelta = 2 * timeBetweenFrames;
         
         var aspectRatio = 2;
-        var width = args.length < 2 ? 75 : Integer.parseInt(args[1]);
+        var width = args.length < 2 ? 80 : Integer.parseInt(args[1]);
         var regionWidth = Math.max(size.getWidth() / width, 1);
         var regionHeight = regionWidth * aspectRatio;
         
