@@ -36,6 +36,7 @@ public class AsciiConverter
     private static SourceDataLine line;
     private static final Object soundSync = new Object();
     private static boolean audioWait = true;
+    private static int height;
     
     public static void main(String[] args) throws IOException, JCodecException, InterruptedException, LineUnavailableException
     {
@@ -113,17 +114,15 @@ public class AsciiConverter
         var regionWidth = Math.max(size.getWidth() / width, 1);
         var regionHeight = regionWidth * aspectRatio;
         
-        var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate * 3), info.getTotalFrames()), regionWidth, regionHeight);
+        var buffer = new Buffer(video, Math.min((int)Math.ceil(framerate * 2), info.getTotalFrames()), regionWidth, regionHeight);
         buffer.fill();
+        
+        height = size.getHeight() / regionHeight;
+        
+        //System.out.print("\u001b[2J");
+        for(var height = AsciiConverter.height; height > 0; height--)
+            System.out.println();
     
-        line.start();
-        synchronized(soundSync)
-        {
-            soundSync.notify();
-        }
-        
-        System.out.print("\u001b[2J");
-        
         var skipped = 0;
         double lastFrameTime = -1;
         String frame;
@@ -143,6 +142,7 @@ public class AsciiConverter
             }
             else
             {
+                startSound();
                 lastFrameTime = System.currentTimeMillis();
             }
             
@@ -150,6 +150,15 @@ public class AsciiConverter
            //Thread.sleep(10);
         }
         System.out.println("Dropped " + skipped + " frames.");
+    }
+    
+    private static void startSound()
+    {
+        line.start();
+        synchronized(soundSync)
+        {
+            soundSync.notify();
+        }
     }
     
     private static class Decoder implements Callable<String>
@@ -275,14 +284,15 @@ public class AsciiConverter
                         buffer[x] = oldBuffer[x];
                 }
                 if(size < buffer.length)
-                    return "\u001b[Hbuffering...";//fill();
+                {
+    
+                    return "\u001b[" + height + "A\r" +
+                            "buffering..." +
+                            String.valueOf(System.lineSeparator()).repeat(Math.max(0, AsciiConverter.height));
+                }
                 
                 buffering = false;
-                line.start();
-                synchronized(soundSync)
-                {
-                    soundSync.notify();
-                }
+                startSound();
             }
             
             var out = buffer[tail];

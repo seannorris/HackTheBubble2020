@@ -14,10 +14,11 @@ public class GetSetPixels
     public static String toAscii(BufferedImage img, int regionWidth, int regionHeight)
     {
         var out = new StringBuilder();
-        out.append("\u001b[H");
+        //out.append("\u001b[H");
         
         int width = img.getWidth() / regionWidth;
         int height = img.getHeight() / regionHeight;
+        out.append("\u001b[").append(height).append("A\r");
         
         var downScaledImage = resize(img, width, height * 2);
         var raster = downScaledImage.getRaster();
